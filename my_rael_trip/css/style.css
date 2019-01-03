@@ -488,7 +488,7 @@ div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area {
 }
 @media (max-width:777px) {
   div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area {
-    left: 55%;
+    left: 45%;
     top: 45%;
   }
 }
