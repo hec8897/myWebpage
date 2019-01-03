@@ -529,8 +529,13 @@ div.page1_container div.banner ul#slider_nav {
   position: absolute;
   height: 40px;
   top: 450px;
-  left: 15%;
+  left: 20%;
   padding-bottom: 20px;
+}
+@media (max-width:777px) {
+  div.page1_container div.banner ul#slider_nav {
+    left: 5%;
+  }
 }
 div.page1_container div.banner ul#slider_nav li {
   width: 65px;
@@ -543,6 +548,11 @@ div.page1_container div.banner ul#slider_nav li {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+}
+@media (max-width:777px) {
+  div.page1_container div.banner ul#slider_nav li {
+    width: 40px;
+  }
 }
 div.page1_container div.banner ul#slider_nav li:nth-child(1) {
   background-color: #81DAF5;
@@ -650,11 +660,18 @@ div.page1_container div.main_content section.section1 div.thumnails div.thum div
 }
 div.page1_container div.main_content section.section1 div.thumnails div.more_thum,
 div.page1_container div.main_content section.section1 div.thumnails div.hide_thum {
-  width: 90%;
-  height: 100px;
-  background: gray;
+  width: 80%;
+  height: 50px;
+  background-color: #81DAF5;
+  color: white;
+  box-sizing: border-box;
   margin: 0px auto;
   display: none;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  border: 1px solid #52ccf1;
+  line-height: 50px;
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section1 div.thumnails div.more_thum {
@@ -663,7 +680,6 @@ div.page1_container div.main_content section.section1 div.thumnails div.hide_thu
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section1 div.thumnails div.hide_thum {
-    background: yellow;
     display: none;
   }
 }
@@ -673,7 +689,7 @@ div.page1_container div.main_content section.section2 {
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 {
-    height: 650px;
+    height: 700px;
     justify-content: space-around;
   }
 }
@@ -705,7 +721,7 @@ div.page1_container div.main_content section.section2 div.miny_thums::-webkit-sc
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
     width: 70%;
-    height: 600px;
+    height: 650px;
     justify-content: space-around;
   }
 }

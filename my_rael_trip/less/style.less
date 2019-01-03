@@ -564,8 +564,11 @@ section.main_section{
                 position: absolute;
                 height: 40px;;
                 top: 450px;;
-                left: 15%;
+                left: 20%;
                 padding-bottom: 20px;
+                @media@smallMedia{
+                    left: 5%;
+                }
 
                 li{ 
                     width: 65px;
@@ -578,6 +581,9 @@ section.main_section{
                     background-repeat: no-repeat;
                     background-size: cover;
                     cursor: pointer;
+                    @media@smallMedia{
+                        width: 40px;
+                    }
                     
                     &:nth-child(1){
                         background-color: @pointColor;
@@ -685,11 +691,18 @@ section.main_section{
                         }
                     }
                     div.more_thum , div.hide_thum{
-                        width: 90%;
-                        height: 100px;            
-                        background:gray;
+                        width: 80%;
+                        height: 50px;     
+                        background-color: @pointColor;
+                        color: white;
+                        box-sizing: border-box;       
                         margin: 0px auto;
-                        display: none;                      
+                        display: none;     
+                        text-align: center;  
+                        font-size: 1.4rem;
+                        border-radius: 10px;
+                        border: 1px solid darken(@pointColor,10%);
+                        line-height: 50px;
                     }
                     div.more_thum{
                         @media@smallMedia{
@@ -698,7 +711,6 @@ section.main_section{
                     }
                     div.hide_thum{
                         @media@smallMedia{
-                            background: yellow;
                             display: none;
                         }
                     }
@@ -711,7 +723,7 @@ section.main_section{
 
                 }    
                 @media@MediumMedia{
-                    height: 650px;
+                    height: 700px;
                     justify-content: space-around;
 
                 }
@@ -743,7 +755,7 @@ section.main_section{
                     }    
                     @media@MediumMedia{
                         width: 70%;
-                        height: 600px;
+                        height: 650px;
                         justify-content: space-around;
 
                     }
