@@ -28,10 +28,10 @@ html,body{
     @media@LargeMedia{
     }    
     @media@MediumMedia{
-        font-size: 12px;    
+        font-size: 14px;    
     }
     @media@smallMedia{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 ul.main_bg{
@@ -494,6 +494,13 @@ section.main_section{
                         &:nth-child(1){
                         background:url(../img/page1_bannerimg1.jpg);
                         background-position: center;
+                        @media@LargeMedia{    
+                        }    
+                        @media@MediumMedia{
+                        }
+                        @media@smallMedia{
+                            background-position: 43% 50%;                        
+                        }
                         div.text_area{
                             width: 400px;
                             height: 150px;
@@ -501,11 +508,16 @@ section.main_section{
                             left: 50%;
                             top: 20%;
                             font-family: 'Roboto', sans-serif;
+                            @media@smallMedia{
+                            left: 55%;
+                            top: 45%;
+                            }
 
                             p.event{
                                 color: #4571ff;
                                 font-weight: bold;
-                                font-size: 1.40rem;
+                                font-size: 1.0rem;
+                                
                             }
                             h1{
                                 color: white;
@@ -654,8 +666,9 @@ section.main_section{
                             h2{
                                 padding: 10px;
                                 font-weight: normal;
-                                font-size: 1.0rem;
+                                font-size: 1.2rem;
                                 font-weight: bold;
+                               
                                 a{
                                     color: black;
                                     &:hover{
@@ -665,6 +678,7 @@ section.main_section{
                                 }
                             }
                             p{
+                                font-size: 1.0rem;
                                 padding-left: 10px;
                                 color: gray;
                             }

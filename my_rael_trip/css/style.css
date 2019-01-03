@@ -24,13 +24,13 @@ body {
 @media (max-width:991px) and (min-width:778px) {
   html,
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width:777px) {
   html,
   body {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 ul.main_bg {
@@ -473,6 +473,11 @@ div.page1_container div.banner ul#sliders li.slide:nth-child(1) {
   background: url(../img/page1_bannerimg1.jpg);
   background-position: center;
 }
+@media (max-width:777px) {
+  div.page1_container div.banner ul#sliders li.slide:nth-child(1) {
+    background-position: 43% 50%;
+  }
+}
 div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area {
   width: 400px;
   height: 150px;
@@ -481,10 +486,16 @@ div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area {
   top: 20%;
   font-family: 'Roboto', sans-serif;
 }
+@media (max-width:777px) {
+  div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area {
+    left: 55%;
+    top: 45%;
+  }
+}
 div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area p.event {
   color: #4571ff;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 div.page1_container div.banner ul#sliders li.slide:nth-child(1) div.text_area h1 {
   color: white;
@@ -622,7 +633,7 @@ div.page1_container div.main_content section.section1 div.thumnails div.thum div
 div.page1_container div.main_content section.section1 div.thumnails div.thum div.thum_text h2 {
   padding: 10px;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 div.page1_container div.main_content section.section1 div.thumnails div.thum div.thum_text h2 a {
@@ -633,6 +644,7 @@ div.page1_container div.main_content section.section1 div.thumnails div.thum div
   text-decoration: underline;
 }
 div.page1_container div.main_content section.section1 div.thumnails div.thum div.thum_text p {
+  font-size: 1rem;
   padding-left: 10px;
   color: gray;
 }
