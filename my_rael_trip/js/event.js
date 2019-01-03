@@ -44,7 +44,7 @@ var eventMethods = {
                 num++;
                 $("#sliders").animate({
                     "right": "+=100%"
-                }, 500)
+                }, 700)
                 if (num == 1) {
                     $("#slider_nav li:nth-child(" + num + ")").css({
                         "background-color": "#81DAF5"
@@ -84,7 +84,7 @@ var eventMethods = {
                     //num > 3 일때 num = 1 로 return                        
                 }
             }
-            var slideIntervar = setInterval(slideFn, 5000)
+            var slideIntervar = setInterval(slideFn, 8000)
             $("#slider_nav li:nth-child(4)").click(function () {
                 clearInterval(slideIntervar)
                 $(this).css({
@@ -95,7 +95,7 @@ var eventMethods = {
                 })
             })
             $("#slider_nav li:nth-child(5)").click(function () {
-                setInterval(slideFn, 5000);
+                setInterval(slideFn, 8000);
                 $(this).css({
                     "display": "none"
                 })
