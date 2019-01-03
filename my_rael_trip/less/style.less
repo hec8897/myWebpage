@@ -742,9 +742,10 @@ section.main_section{
                     div{
                         width: 15%;
                         min-width: 170px;
-                        height: 280px;;
+                        height: 300px;;
                         border-radius: 10px;
                         margin-bottom: 10px;
+                        background-repeat: no-repeat;
                         @media@LargeMedia{    
                         }    
                         @media@MediumMedia{
@@ -752,25 +753,39 @@ section.main_section{
                         max-width: 140px;
                         }
                         @media@smallMedia{
-                        min-width: 120px;
+                        min-width: 140px;
                         }    
                         &:nth-child(1){
-                            background: gold;
+                            background-image: url(../img/miny_thum1.jpg);
+                            background-position:center;
                         }
                         &:nth-child(2){
-                            background: mediumaquamarine;
+                            background-image: url(../img/miny_thum2.jpg);
+                            background-position:center;
+                            background-size: 250% 100%;
                         }
                         &:nth-child(3){
-                            background: gold;
+                            background-image: url(../img/miny_thum3.jpg);
+                            background-position:40% 50%;
+                            background-size: 230% 100%;;
+
                         }
                         &:nth-child(4){
-                            background: mediumaquamarine;
+                            background-image: url(../img/miny_thum4.jpg);
+                            background-position:45% 50%;
+                            background-size: 220% 100%;
                         }
                         &:nth-child(5){
-                            background: gold;
+                            background-image: url(../img/miny_thum5.jpg);
+                            background-position:30% 50%;
+                            background-size: 220% 100%;
+
                         }
                         &:nth-child(6){
-                            background: mediumaquamarine;
+                            background-image: url(../img/miny_thum6.jpg);
+                            background-position:center;
+                            background-size: 220% 100%;
+
                         }
 
                     }
