@@ -152,25 +152,33 @@ var eventMethods = {
         })
     },
     thummoreEvent: function () {
-
         $(document).ready(function () {
-
             $(".more_thum").click(function () {
                 $(this).hide();
                 $(".hide_thum").show();
                 $(".thum").show();
             })
-
             $(".hide_thum").click(function () {
                 $(this).hide();
                 $(".thum:nth-child(2),.thum:nth-child(3)").hide();
                 $(".more_thum").show();
-
             });
-
-
         })
+    },
+    rotateBoxEvent:function(){
 
+        $(document).ready(function(){
+            $(".left_btn").click(function(){
+                $(".rotate_boxs").animate({
+                    "marginLeft":"41%"
+                })
+            })
+            $(".right_btn").click(function(){
+                $(".rotate_boxs").animate({
+                    "marginLeft":"-41%"
+                })
+            })
+        })
 
     }
 }
@@ -178,6 +186,7 @@ eventMethods.MainBgEvent();
 eventMethods.FavorEvent();
 eventMethods.MainPageSlider();
 eventMethods.thummoreEvent();
+eventMethods.rotateBoxEvent();
 
 $(window).resize(function () {
 
@@ -220,15 +229,3 @@ $(window).resize(function () {
   
 // }
 
-$(document).ready(function(){
-    $(".left_btn").click(function(){
-        $(".rotate_boxs").animate({
-            "marginLeft":"41%"
-        })
-    })
-    $(".right_btn").click(function(){
-        $(".rotate_boxs").animate({
-            "marginLeft":"-41%"
-        })
-    })
-})
