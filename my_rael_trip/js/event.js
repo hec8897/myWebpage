@@ -219,3 +219,16 @@ $(window).resize(function () {
 // else if (smallQuery) {
   
 // }
+
+$(document).ready(function(){
+    $(".left_btn").click(function(){
+        $(".rotate_boxs").animate({
+            "marginLeft":"41%"
+        })
+    })
+    $(".right_btn").click(function(){
+        $(".rotate_boxs").animate({
+            "marginLeft":"-41%"
+        })
+    })
+})
