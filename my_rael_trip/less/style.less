@@ -752,6 +752,7 @@ section.main_section{
                     margin: 10px auto;
                     overflow-y: scroll;
                     -ms-overflow-style: none;                     
+
                     &::-webkit-scrollbar{
                         display: none;
                     }
@@ -766,11 +767,9 @@ section.main_section{
                     }
                     @media@smallMedia{
                         width: 95%;
-                        height: 650px;
-                        
-                    }    
-                
-                    div{
+                        height: 650px;                        
+                    }                    
+                    &>div{
                         width: 15%;
                         min-width: 170px;
                         height: 300px;;
@@ -778,6 +777,7 @@ section.main_section{
                         margin-bottom: 10px;
                         background-repeat: no-repeat;
                         box-shadow: 0px 0px 1px 1px #424242;
+                        transition: all 2s;
                         @media@LargeMedia{    
                         }    
                         @media@MediumMedia{
@@ -787,6 +787,33 @@ section.main_section{
                         @media@smallMedia{
                         min-width: 140px;
                         }    
+                       
+                        &>div{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            padding: 20px;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            display: none;
+
+                            h2{ 
+                                font-size: 1rem;
+                                font-weight: 500;                           
+                    
+                                a{
+                                    color: white;
+                                }                              
+                            }
+                            p{
+                                color: lightgray;
+                                font-size: 0.8rem;
+                                margin-top: 10px;
+                            }
+                        }
+                        &:hover .miny_thum_cover{
+                            display: block;
+
+                        }
                         &:nth-child(1){
                             background-image: url(../img/miny_thum1.jpg);
                             background-position:center;
@@ -824,17 +851,14 @@ section.main_section{
 
                 }
             }
-
             section.section3{
                 max-width: 1200px;
                 margin: 0px auto;
                 height: 400px;
                 overflow: hidden;
                 @media@LargeMedia{ 
-
                 }    
                 @media@MediumMedia{
-
                 }
                 @media@smallMedia{
                     display: none;
@@ -855,8 +879,9 @@ section.main_section{
                     div.rotate_btn{
                         width: 40px;
                         height: 40px;;
+                        margin-top: -30px;
                         background-color: #eeeeee;
-                        opacity: 0.1;
+                        opacity: 0.5;
                         box-shadow:0px 0px 3px 2px #424242;
                         border-radius: 50px;
                         background-repeat: no-repeat;
@@ -865,12 +890,8 @@ section.main_section{
                         position: absolute;
                         cursor: pointer;
                         &:hover{
-                        opacity: 0.7;
-
-                        }
-                        &:active{
-                        }
-                      
+                        opacity: 0.8;
+                        }                                          
                     }
                     .left_btn{
                         background-image: url(../img/left_btn.png);
@@ -878,7 +899,6 @@ section.main_section{
                         top: 50%;
                         transform:translateY(-50%);
                         z-index: 999;;
-
                     }
                     .right_btn{
                         background-image: url(../img/right_btn.png);
@@ -886,7 +906,6 @@ section.main_section{
                         top: 50%;
                         transform:translateY(-50%);
                         z-index: 999;;
-
                     }
                     div.rotate_boxs{
                         width: 200%;
@@ -899,7 +918,6 @@ section.main_section{
                         div.rotate_box{
                             width: 350px;
                             height: 200px;
-                            margin-top:30px;
                             background: tomato;
                             border-radius: 10px;
                             display: inline-block;

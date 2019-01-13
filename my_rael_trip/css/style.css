@@ -731,7 +731,7 @@ div.page1_container div.main_content section.section2 div.miny_thums::-webkit-sc
     height: 650px;
   }
 }
-div.page1_container div.main_content section.section2 div.miny_thums div {
+div.page1_container div.main_content section.section2 div.miny_thums > div {
   width: 15%;
   min-width: 170px;
   height: 300px;
@@ -739,43 +739,67 @@ div.page1_container div.main_content section.section2 div.miny_thums div {
   margin-bottom: 10px;
   background-repeat: no-repeat;
   box-shadow: 0px 0px 1px 1px #424242;
+  transition: all 2s;
 }
 @media (max-width:991px) and (min-width:778px) {
-  div.page1_container div.main_content section.section2 div.miny_thums div {
+  div.page1_container div.main_content section.section2 div.miny_thums > div {
     width: 30%;
     max-width: 140px;
   }
 }
 @media (max-width:777px) {
-  div.page1_container div.main_content section.section2 div.miny_thums div {
+  div.page1_container div.main_content section.section2 div.miny_thums > div {
     min-width: 140px;
   }
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(1) {
+div.page1_container div.main_content section.section2 div.miny_thums > div > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+div.page1_container div.main_content section.section2 div.miny_thums > div > div h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+div.page1_container div.main_content section.section2 div.miny_thums > div > div h2 a {
+  color: white;
+}
+div.page1_container div.main_content section.section2 div.miny_thums > div > div p {
+  color: lightgray;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+div.page1_container div.main_content section.section2 div.miny_thums > div:hover .miny_thum_cover {
+  display: block;
+}
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(1) {
   background-image: url(../img/miny_thum1.jpg);
   background-position: center;
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(2) {
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(2) {
   background-image: url(../img/miny_thum2.jpg);
   background-position: center;
   background-size: 250% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(3) {
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(3) {
   background-image: url(../img/miny_thum3.jpg);
   background-position: 40% 50%;
   background-size: 230% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(4) {
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(4) {
   background-image: url(../img/miny_thum4.jpg);
   background-position: 45% 50%;
   background-size: 220% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(5) {
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(5) {
   background-image: url(../img/miny_thum5.jpg);
   background-position: 30% 50%;
   background-size: 220% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(6) {
+div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(6) {
   background-image: url(../img/miny_thum6.jpg);
   background-position: center;
   background-size: 220% 100%;
@@ -808,8 +832,9 @@ div.page1_container div.main_content section.section3 div.rotate_menu {
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn {
   width: 40px;
   height: 40px;
+  margin-top: -30px;
   background-color: #eeeeee;
-  opacity: 0.1;
+  opacity: 0.5;
   box-shadow: 0px 0px 3px 2px #424242;
   border-radius: 50px;
   background-repeat: no-repeat;
@@ -819,7 +844,7 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   cursor: pointer;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu .left_btn {
   background-image: url(../img/left_btn.png);
@@ -847,7 +872,6 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box {
   width: 350px;
   height: 200px;
-  margin-top: 30px;
   background: tomato;
   border-radius: 10px;
   display: inline-block;
