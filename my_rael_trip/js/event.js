@@ -1,19 +1,17 @@
 var eventMethods = {
     MainBgEvent: function () {
         $(window).on("load", function () {
-    
-        var i = 0;
-
-        setInterval(function () {
-            i++;
-            $(".main_bg li:nth-last-child("+i+")").fadeOut();
-            if (i=== 3) {
-                $(".main_bg li").fadeIn();
-                return i = 0;
-            }
-        }, 5000)
+            var i = 0;
+            setInterval(function () {
+                i++;
+                $(".main_bg li:nth-last-child(" + i + ")").fadeOut(500);
+                if (i === 3) {
+                    $(".main_bg li").fadeIn(500);
+                    return i = 0;
+                }
+            }, 6000)
         })
-      
+
     },
     FavorEvent: function () {
         $(document).ready(function () {
@@ -168,41 +166,41 @@ var eventMethods = {
             });
         })
     },
-    rotateBoxEvent:function(){
+    rotateBoxEvent: function () {
 
-        $(document).ready(function(){
-            $(".left_btn").click(function(){
+        $(document).ready(function () {
+            $(".left_btn").click(function () {
                 $(".rotate_boxs").animate({
-                    "marginLeft":"41%"
+                    "marginLeft": "41%"
                 })
             })
-            $(".right_btn").click(function(){
+            $(".right_btn").click(function () {
                 $(".rotate_boxs").animate({
-                    "marginLeft":"-41%"
+                    "marginLeft": "-41%"
                 })
             })
         })
 
     },
-    headerChangeEvent:function(){
-        $(window).scroll(function(){
-            if(window.scrollY >= 1){
+    headerChangeEvent: function () {
+        $(window).scroll(function () {
+            if (window.scrollY >= 1) {
                 $(".header_top_content").hide();
                 $("header").css({
-                    "height":"50px;"
+                    "height": "50px;"
                 })
                 $(".header_bottom_content").css({
-                    "position":"fixed",
-                    "top":"0px",
-                    "height":"50px",
-                    "z-index":"999"
-                                    
+                    "position": "fixed",
+                    "top": "0px",
+                    "height": "50px",
+                    "z-index": "999"
+
                 })
             }
-            else if(window.screenY == 0){
+            else if (window.screenY == 0) {
                 $(".header_top_content").show();
                 $(".header_bottom_content").css({
-                    "position":"inherit",
+                    "position": "inherit",
                 })
 
 
@@ -250,7 +248,7 @@ $(window).resize(function () {
 
 // //LagerSize MediaQuery
 // if (LagreQuery) {
-  
+
 // }
 
 // else if (MediumQuery) {
@@ -258,6 +256,6 @@ $(window).resize(function () {
 
 // }
 // else if (smallQuery) {
-  
+
 // }
 
