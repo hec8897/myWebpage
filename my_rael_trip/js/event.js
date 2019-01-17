@@ -185,11 +185,11 @@ var eventMethods = {
     headerChangeEvent: function () {
         $(window).scroll(function () {
             if (window.scrollY >= 1) {
-                $(".header_top_content").hide();
-                $("header").css({
+                $(".page_header_top").hide();
+                $(".page_header").css({
                     "height": "50px;"
                 })
-                $(".header_bottom_content").css({
+                $(".page_header_bottom").css({
                     "position": "fixed",
                     "top": "0px",
                     "height": "50px",
@@ -198,8 +198,8 @@ var eventMethods = {
                 })
             }
             else if (window.screenY == 0) {
-                $(".header_top_content").show();
-                $(".header_bottom_content").css({
+                $(".page_header_top").show();
+                $(".page_header_bottom").css({
                     "position": "inherit",
                 })
 
