@@ -1,16 +1,19 @@
 var eventMethods = {
     MainBgEvent: function () {
         $(window).on("load", function () {
-            $(".main_bg > li:gt(0)").hide();
-            setInterval(function () {
-                $('.main_bg > li:first')
-                    .fadeOut(1000)
-                    .next()
-                    .fadeIn(1000)
-                    .end()
-                    .appendTo('.main_bg');
-            }, 8000);
+    
+        var i = 0;
+
+        setInterval(function () {
+            i++;
+            $(".main_bg li:nth-last-child("+i+")").fadeOut();
+            if (i=== 3) {
+                $(".main_bg li").fadeIn();
+                return i = 0;
+            }
+        }, 5000)
         })
+      
     },
     FavorEvent: function () {
         $(document).ready(function () {
@@ -180,13 +183,42 @@ var eventMethods = {
             })
         })
 
+    },
+    headerChangeEvent:function(){
+        $(window).scroll(function(){
+            if(window.scrollY >= 1){
+                $(".header_top_content").hide();
+                $("header").css({
+                    "height":"50px;"
+                })
+                $(".header_bottom_content").css({
+                    "position":"fixed",
+                    "top":"0px",
+                    "height":"50px",
+                    "z-index":"999"
+                                    
+                })
+            }
+            else if(window.screenY == 0){
+                $(".header_top_content").show();
+                $(".header_bottom_content").css({
+                    "position":"inherit",
+                })
+
+
+            }
+        })
     }
+
 }
 eventMethods.MainBgEvent();
 eventMethods.FavorEvent();
 eventMethods.MainPageSlider();
 eventMethods.thummoreEvent();
 eventMethods.rotateBoxEvent();
+eventMethods.headerChangeEvent();
+
+
 
 $(window).resize(function () {
 

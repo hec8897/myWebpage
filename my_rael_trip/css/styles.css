@@ -20,12 +20,11 @@ html,
 body {
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif;
-  min-height: 800px;
 }
 @media (max-width:991px) and (min-width:778px) {
   html,
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (max-width:777px) {
@@ -33,11 +32,6 @@ body {
   body {
     font-size: 12px;
   }
-}
-ul.main_bg {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
 }
 ul.main_bg li {
   width: 100%;
@@ -293,63 +287,62 @@ header div.header_wrap div.header_bottom_content div.favor ul {
 header div.header_wrap div.header_bottom_content div.favor ul li {
   height: 20px;
 }
-header.page_header {
+header.page1_header {
   height: 150px;
   border: 0px;
-  position: inherit;
 }
-header.page_header a {
+header.page1_header a {
   color: #424242 !important;
 }
-header.page_header .header_wrap {
+header.page1_header .header_wrap {
   height: 65%;
 }
-header.page_header h1.page1_logo {
+header.page1_header h1.page1_logo {
   width: 23%;
   height: 35px;
   margin-top: 5px;
   background-image: url(../img/Colorlogo.png);
 }
 @media (max-width:1200px) and (min-width:992px) {
-  header.page_header h1.page1_logo {
+  header.page1_header h1.page1_logo {
     width: 23%;
     margin-left: 3%;
   }
 }
 @media (max-width:991px) and (min-width:778px) {
-  header.page_header h1.page1_logo {
+  header.page1_header h1.page1_logo {
     width: 23%;
     margin-left: 0%;
   }
 }
 @media (max-width:777px) {
-  header.page_header h1.page1_logo {
+  header.page1_header h1.page1_logo {
     width: 100%;
     height: 50px;
     margin: 0px auto;
     background-size: 40%;
   }
 }
-header.page_header div.page1_top_input {
+header.page1_header div.page1_top_input {
   height: 30px!important;
   margin: 10px;
 }
 @media (max-width:1200px) and (min-width:992px) {
-  header.page_header div.page1_top_input {
+  header.page1_header div.page1_top_input {
     width: 30%;
   }
 }
 @media (max-width:991px) and (min-width:778px) {
-  header.page_header div.page1_top_input {
+  header.page1_header div.page1_top_input {
     width: 30%;
   }
 }
 @media (max-width:777px) {
-  header.page_header div.page1_top_input {
+  header.page1_header div.page1_top_input {
     display: none;
   }
 }
-header.page_header div.page1_top_input div {
+header.page1_header div.page1_top_input div {
   width: 10%;
   height: 100%;
   float: left;
@@ -357,38 +350,37 @@ header.page_header div.page1_top_input div {
   line-height: 40px;
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
-header.page_header div.page1_top_input input {
+header.page1_header div.page1_top_input input {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
-header.page_header div.page1_top_input input::placeholder {
+header.page1_header div.page1_top_input input::placeholder {
   color: white;
 }
-header.page_header div.page1_top_input input:-ms-input-placeholder {
+header.page1_header div.page1_top_input input:-ms-input-placeholder {
   color: white;
 }
-header.page_header ul.top_li {
+header.page1_header ul.top_li {
   margin-top: 10px;
 }
-header.page_header div.header_bottom_content {
+header.page1_header div.header_bottom_content {
   height: 35%;
   width: 100%!important;
-  background-color: white;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
-header.page_header div.header_bottom_content ul.page_nav {
+header.page1_header div.header_bottom_content ul.page1_nav {
   max-width: 1200px;
   margin: 0px auto;
   line-height: 50px;
   padding-left: 20px;
 }
 @media (max-width:777px) {
-  header.page_header div.header_bottom_content ul.page_nav {
+  header.page1_header div.header_bottom_content ul.page1_nav {
     text-align: center;
     padding-left: 0px;
   }
 }
-header.page_header div.header_bottom_content ul.page_nav li {
+header.page1_header div.header_bottom_content ul.page1_nav li {
   font-size: 0.9rem;
   height: 50px;
   display: inline-block;
@@ -397,18 +389,15 @@ header.page_header div.header_bottom_content ul.page_nav li {
   text-align: center;
 }
 @media (max-width:777px) {
-  header.page_header div.header_bottom_content ul.page_nav li {
+  header.page1_header div.header_bottom_content ul.page1_nav li {
     font-size: 1.1rem;
     margin: 0px 10px 0px 10px;
   }
 }
-header.page_header div.header_bottom_content ul.page_nav li:hover {
+header.page1_header div.header_bottom_content ul.page1_nav li:hover {
   border-bottom: 5px solid rgba(129, 218, 245, 0.4);
 }
-header.page_header div.header_bottom_content .page1_nav li:nth-child(1) {
-  border-bottom: 5px solid #81DAF5;
-}
-header.page_header div.header_bottom_content .page2_nav li:nth-child(2) {
+header.page1_header div.header_bottom_content ul.page1_nav li:nth-child(1) {
   border-bottom: 5px solid #81DAF5;
 }
 div.main_container {
@@ -594,7 +583,6 @@ div.page1_container div.main_content section.section1 h1 {
   text-align: left;
   margin: 0px auto;
   padding-bottom: 7px;
-  padding-left: 20px;
 }
 div.page1_container div.main_content section.section1 div.thumnails {
   width: 100%;
@@ -690,19 +678,18 @@ div.page1_container div.main_content section.section1 div.thumnails div.hide_thu
 }
 div.page1_container div.main_content section.section2 {
   max-width: 1200px;
-  min-width: 340px;
   height: 420px;
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 {
-    height: 800px;
+    height: 700px;
     justify-content: space-around;
   }
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 {
     width: 90%;
-    height: 1200px;
+    height: 800px;
   }
 }
 div.page1_container div.main_content section.section2 h1 {
@@ -710,7 +697,6 @@ div.page1_container div.main_content section.section2 h1 {
   font-size: 1.2rem;
   text-align: left;
   margin: 0px auto;
-  padding-left: 20px;
 }
 div.page1_container div.main_content section.section2 div.miny_thums {
   width: 100%;
@@ -719,6 +705,7 @@ div.page1_container div.main_content section.section2 div.miny_thums {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 10px auto;
+  overflow-y: scroll;
   -ms-overflow-style: none;
 }
 div.page1_container div.main_content section.section2 div.miny_thums::-webkit-scrollbar {
@@ -726,17 +713,20 @@ div.page1_container div.main_content section.section2 div.miny_thums::-webkit-sc
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
+    width: 70%;
+    height: 650px;
     justify-content: space-around;
   }
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
-    width: 90%;
+    width: 95%;
     height: 650px;
   }
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div {
+div.page1_container div.main_content section.section2 div.miny_thums div {
   width: 15%;
+  min-width: 170px;
   height: 300px;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -744,81 +734,60 @@ div.page1_container div.main_content section.section2 div.miny_thums > div {
   box-shadow: 0px 0px 1px 1px #424242;
 }
 @media (max-width:991px) and (min-width:778px) {
-  div.page1_container div.main_content section.section2 div.miny_thums > div {
-    width: 28%;
-    height: 350px;
-    margin: 10px;
+  div.page1_container div.main_content section.section2 div.miny_thums div {
+    width: 30%;
+    max-width: 140px;
   }
 }
 @media (max-width:777px) {
-  div.page1_container div.main_content section.section2 div.miny_thums > div {
-    width: 45%;
-    height: 380px;
+  div.page1_container div.main_content section.section2 div.miny_thums div {
+    min-width: 140px;
   }
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div a {
-  color: white;
-}
-div.page1_container div.main_content section.section2 div.miny_thums > div a > div {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-div.page1_container div.main_content section.section2 div.miny_thums > div a > div h2 {
-  font-size: 1rem;
-  font-weight: 500;
-}
-div.page1_container div.main_content section.section2 div.miny_thums > div a > div p {
-  color: lightgray;
-  font-size: 0.8rem;
-  margin-top: 10px;
-}
-div.page1_container div.main_content section.section2 div.miny_thums > div:hover .miny_thum_cover {
-  display: block;
-}
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(1) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(1) {
   background-image: url(../img/miny_thum1.jpg);
   background-position: center;
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(2) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(2) {
   background-image: url(../img/miny_thum2.jpg);
   background-position: center;
+  background-size: 250% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(3) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(3) {
   background-image: url(../img/miny_thum3.jpg);
   background-position: 40% 50%;
+  background-size: 230% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(4) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(4) {
   background-image: url(../img/miny_thum4.jpg);
   background-position: 45% 50%;
+  background-size: 220% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(5) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(5) {
   background-image: url(../img/miny_thum5.jpg);
   background-position: 30% 50%;
+  background-size: 220% 100%;
 }
-div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(6) {
+div.page1_container div.main_content section.section2 div.miny_thums div:nth-child(6) {
   background-image: url(../img/miny_thum6.jpg);
   background-position: center;
+  background-size: 220% 100%;
 }
 div.page1_container div.main_content section.section3 {
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 0px auto;
   height: 400px;
   overflow: hidden;
 }
-@media (max-width:991px) and (min-width:778px) {
+@media (max-width:777px) {
   div.page1_container div.main_content section.section3 {
-    height: 800px;
+    display: none;
   }
 }
 div.page1_container div.main_content section.section3 h1 {
   text-align: left;
   font-size: 1.2rem;
   height: 50px;
-  padding-left: 20px;
 }
 div.page1_container div.main_content section.section3 h1 span {
   color: #424242;
@@ -832,9 +801,8 @@ div.page1_container div.main_content section.section3 div.rotate_menu {
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn {
   width: 40px;
   height: 40px;
-  margin-top: -30px;
   background-color: #eeeeee;
-  opacity: 0.5;
+  opacity: 0.1;
   box-shadow: 0px 0px 3px 2px #424242;
   border-radius: 50px;
   background-repeat: no-repeat;
@@ -843,35 +811,25 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   position: absolute;
   cursor: pointer;
 }
-@media (max-width:991px) and (min-width:778px) {
-  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn {
-    display: none;
-  }
-}
-@media (max-width:777px) {
-  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn {
-    display: none;
-  }
-}
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_btn:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu .left_btn {
   background-image: url(../img/left_btn.png);
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 900;
+  z-index: 999;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu .right_btn {
   background-image: url(../img/right_btn.png);
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 900;
+  z-index: 999;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs {
-  width: 240%;
+  width: 200%;
   height: 80%;
   position: relative;
   top: 10%;
@@ -879,39 +837,12 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   transform: translateX(-50%);
   text-align: center;
 }
-@media (max-width:991px) and (min-width:778px) {
-  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs {
-    width: 95%;
-    height: 120%;
-  }
-}
-@media (max-width:777px) {
-  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs {
-    width: 95%;
-  }
-}
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box {
   width: 350px;
   height: 200px;
   background: tomato;
   border-radius: 10px;
   display: inline-block;
-  background-size: 100%;
-  overflow: hidden;
-  margin: 5px;
-}
-div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box h3 {
-  margin-top: 150px;
-  height: 10%;
-  font-size: 1.1rem;
-}
-div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box h3 a {
-  color: white;
-}
-div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box p {
-  color: #424242;
-  font-size: 0.8rem;
-  margin-top: 5px;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(1) {
   background-image: url(../img/event_thum1.jpg);
@@ -922,66 +853,23 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   background-position: 50% 40%;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(3) {
-  background-image: url(../img/event_thum3.jpg);
+  background-image: url(../img/event_thum1.jpg);
   background-position: 50% 40%;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(4) {
-  background-image: url(../img/event_thum4.jpg);
+  background-image: url(../img/event_thum2.jpg);
   background-position: 50% 40%;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(5) {
-  background-image: url(../img/event_thum5.jpg);
+  background-image: url(../img/event_thum1.jpg);
   background-position: 50% 40%;
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(6) {
-  background-image: url(../img/event_thum6.jpg);
+  background-image: url(../img/event_thum2.jpg);
   background-position: 50% 40%;
 }
 div.page1_container footer {
   width: 100%;
   height: 400px;
   background: #424242;
-}
-div.page1_container footer div.footer_cover {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0px auto;
-  padding: 20px;
-}
-div.page1_container footer div.footer_cover div.footer_list {
-  height: 60%;
-}
-div.page1_container footer div.footer_cover div.footer_list div {
-  width: 20%;
-  height: 100%;
-  float: left;
-  box-sizing: border-box;
-}
-div.page1_container footer div.footer_cover div.footer_list div ul {
-  list-style-type: none;
-}
-div.page1_container footer div.footer_cover div.footer_list div ul h3 {
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-div.page1_container footer div.footer_cover div.footer_list div ul li {
-  color: gray;
-  font-size: 0.9rem;
-  line-height: 25px;
-  padding-left: 5px;
-  font-weight: bold;
-}
-div.page1_container footer div.footer_cover div.footer_list div.footer_logo h1 {
-  width: 70%;
-  height: 30px;
-  background-image: url(../img/mylogo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-div.page1_container footer div.footer_cover div.footer_list div.footer_logo p {
-  font-size: 0.7rem;
-  color: lightgray;
-  margin-top: 30px;
-  line-height: 15px;
 }
