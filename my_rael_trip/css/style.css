@@ -20,7 +20,6 @@ html,
 body {
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif;
-  min-height: 800px;
 }
 @media (max-width:991px) and (min-width:778px) {
   html,
@@ -411,6 +410,10 @@ header.page_header div.header_bottom_content .page1_nav li:nth-child(1) {
 header.page_header div.header_bottom_content .page2_nav li:nth-child(2) {
   border-bottom: 5px solid #81DAF5;
 }
+/*===================intro page main container
+    /*===================intro page main container
+    /*===================intro page main container
+    intro page main container====================*/
 div.main_container {
   position: absolute;
   top: 50%;
@@ -452,6 +455,12 @@ div.main_container div.main_input input {
   float: left;
   background-color: rgba(255, 255, 255, 0.7);
 }
+/*=================page1_container
+    =================================*/
+/*=================page1_container
+    =================================*/
+/*=================page1_container
+    =================================*/
 div.page1_container {
   width: 100%;
   height: 100%;
@@ -937,49 +946,186 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   background-image: url(../img/event_thum6.jpg);
   background-position: 50% 40%;
 }
-div.page1_container footer {
+/*===============page2_container
+        ==============================*/
+div.page2_container div.page2_main_banner {
+  width: 100%;
+  height: 250px;
+  background-image: url(../img/page2_banner.jpg);
+  background-position: 50%;
+}
+div.page2_container div.page2_main_banner div.page2_banner_cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+div.page2_container div.page2_main_banner div.page2_banner_cover h2 {
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+div.page2_container div.page2_icon_section {
+  max-width: 1200px;
+  height: 60px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 1px 1px lightgray;
+}
+div.page2_container div.page2_icon_section ul {
+  width: 80%;
+  height: 100%;
+  margin: 0px auto;
+}
+div.page2_container div.page2_icon_section ul li {
+  padding: 10px;
+  width: 33.33%;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+  display: inline-block;
+  line-height: 20px;
+}
+div.page2_container div.page2_icon_section ul li div.icon {
+  width: 30%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+}
+div.page2_container div.page2_icon_section ul li .icon1 {
+  background-image: url(../img/world_icon.png);
+}
+div.page2_container div.page2_icon_section ul li .icon2 {
+  background-image: url(../img/customer_icon.png);
+}
+div.page2_container div.page2_icon_section ul li .icon3 {
+  background-image: url(../img/chat_icon.png);
+}
+div.page2_container div.page2_icon_section ul li h4 {
+  float: left;
+  font-size: 1.1rem;
+}
+div.page2_container div.page2_icon_section ul li h4 span {
+  color: #424242;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+div.page2_container section.page2_section1 {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+div.page2_container section.page2_section1 h2 {
+  font-size: 1.1rem;
+  padding-left: 10px;
+}
+div.page2_container section.page2_section1 div.hot_trips {
+  width: 100%;
+  height: 80px;
+  margin: 10px auto;
+  text-align: center;
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip {
+  width: 10%;
+  height: 100%;
+  background: gray;
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  background-size: cover;
+  overflow: hidden;
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:hover .hot_trip_cover {
+  display: block;
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(1) {
+  background-image: url(../img/page2_miny_thum1.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(2) {
+  background-image: url(../img/miny_thum5.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(3) {
+  background-image: url(../img/miny_thum6.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(4) {
+  background-image: url(../img/miny_thum2.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(5) {
+  background-image: url(../img/page2_miny_thum1.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(6) {
+  background-image: url(../img/miny_thum5.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(7) {
+  background-image: url(../img/miny_thum6.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(8) {
+  background-image: url(../img/miny_thum2.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(9) {
+  background-image: url(../img/miny_thum1.jpg);
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_trip_cover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_trip_cover h4 {
+  padding-top: 55px;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_trip_cover h4 a {
+  color: white;
+}
+footer {
   width: 100%;
   height: 400px;
   background: #424242;
 }
-div.page1_container footer div.footer_cover {
+footer div.footer_cover {
   max-width: 1200px;
   height: 100%;
   margin: 0px auto;
   padding: 20px;
 }
-div.page1_container footer div.footer_cover div.footer_list {
+footer div.footer_cover div.footer_list {
   height: 60%;
 }
-div.page1_container footer div.footer_cover div.footer_list div {
+footer div.footer_cover div.footer_list div {
   width: 20%;
   height: 100%;
   float: left;
   box-sizing: border-box;
 }
-div.page1_container footer div.footer_cover div.footer_list div ul {
+footer div.footer_cover div.footer_list div ul {
   list-style-type: none;
 }
-div.page1_container footer div.footer_cover div.footer_list div ul h3 {
+footer div.footer_cover div.footer_list div ul h3 {
   color: white;
   font-size: 1rem;
   margin-bottom: 10px;
 }
-div.page1_container footer div.footer_cover div.footer_list div ul li {
+footer div.footer_cover div.footer_list div ul li {
   color: gray;
   font-size: 0.9rem;
   line-height: 25px;
   padding-left: 5px;
   font-weight: bold;
 }
-div.page1_container footer div.footer_cover div.footer_list div.footer_logo h1 {
+footer div.footer_cover div.footer_list div.footer_logo h1 {
   width: 70%;
   height: 30px;
   background-image: url(../img/mylogo.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
-div.page1_container footer div.footer_cover div.footer_list div.footer_logo p {
+footer div.footer_cover div.footer_list div.footer_logo p {
   font-size: 0.7rem;
   color: lightgray;
   margin-top: 30px;

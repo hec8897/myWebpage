@@ -25,7 +25,6 @@ input{
 html,body{
     font-size: 16px;
     font-family: 'Nanum Gothic', sans-serif;
-    min-height: 800px;    
     @media@LargeMedia{
     }    
     @media@MediumMedia{
@@ -440,6 +439,12 @@ section.main_section{
         }
     }
   
+    /*===================intro page main container
+    /*===================intro page main container
+    /*===================intro page main container
+    intro page main container====================*/
+    
+    
     div.main_container{
         position: absolute;;
         top: 50%;
@@ -485,6 +490,13 @@ section.main_section{
 
 
     }
+
+    /*=================page1_container
+    =================================*/    
+    /*=================page1_container
+    =================================*/
+    /*=================page1_container
+    =================================*/
 
     div.page1_container{
         width: 100%;
@@ -1005,6 +1017,157 @@ section.main_section{
             }
 
         }
+  
+
+    }
+
+          /*===============page2_container
+        ==============================*/
+        div.page2_container{
+            div.page2_main_banner{
+                width: 100%;
+                height: 250px;;
+                background-image: url(../img/page2_banner.jpg);
+                background-position: 50%;
+                div.page2_banner_cover{
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.35);
+                    h2{
+                        text-align: center;
+                        color: white;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 1.4rem;
+                        font-family: 'Roboto', sans-serif;
+    
+                    }
+
+                }
+            
+            }
+            div.page2_icon_section{
+                max-width: 1200px;
+                height: 60px;
+                margin: 20px auto;
+                box-shadow: 0px 0px 1px 1px lightgray;
+                ul{
+                    width: 80%;
+                    height: 100%;
+                    margin: 0px auto;
+                    li{ 
+                        padding: 10px;
+                        width: 33.33%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        float: left;
+                        display:inline-block;
+                        line-height: 20px;
+                        div.icon{
+                            width: 30%;
+                            height: 100%;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            float: left;                        
+                        }
+                        .icon1{
+                            background-image: url(../img/world_icon.png);
+                        }
+                        .icon2{
+                            background-image: url(../img/customer_icon.png);
+                        }
+                        .icon3{
+                            background-image: url(../img/chat_icon.png);
+                        }
+                        h4{
+                            float: left;
+                            font-size: 1.1rem;
+                            span{
+                                color: #424242;
+                                font-weight: normal;
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section.page2_section1{
+                max-width: 1200px;
+                margin: 50px auto;
+                h2{
+                    font-size: 1.1rem;
+                    padding-left: 10px;
+                }
+                div.hot_trips{
+                    width: 100%;
+                    height: 80px;;
+                    margin: 10px auto;
+                    text-align: center;
+                    div.hot_trip{
+                        width: 10%;
+                        height: 100%;
+                        background: gray;
+                        display: inline-block;
+                        margin-left: 4px;
+                        margin-right: 4px;
+                        border-radius: 5px;
+                        background-size: cover;
+                        overflow: hidden;
+                        &:hover .hot_trip_cover{
+                            display: block;
+
+                        }
+                        &:nth-child(1){
+                            background-image: url(../img/page2_miny_thum1.jpg);
+                        }
+                        &:nth-child(2){
+                            background-image: url(../img/miny_thum5.jpg);
+                        }
+                        &:nth-child(3){
+                            background-image: url(../img/miny_thum6.jpg);
+                        }
+                        &:nth-child(4){
+                            background-image: url(../img/miny_thum2.jpg);
+                        }
+                        &:nth-child(5){
+                            background-image: url(../img/page2_miny_thum1.jpg);
+                        }
+                        &:nth-child(6){
+                            background-image: url(../img/miny_thum5.jpg);
+                        }
+                        &:nth-child(7){
+                            background-image: url(../img/miny_thum6.jpg);
+                        }
+                        &:nth-child(8){
+                            background-image: url(../img/miny_thum2.jpg);
+                        }
+                        &:nth-child(9){
+                            background-image: url(../img/miny_thum1.jpg);
+                        }
+                        div.hot_trip_cover{
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0,0,0,0.3);
+                            display: none;
+                            h4{
+                                padding-top: 55px;
+                                font-size: 0.9rem;
+                                font-weight: normal;
+                                a{
+                                color: white;
+
+                                }
+                            }
+                            
+                        }
+
+                    }
+                }
+            }
+        }
 
         footer{
             width: 100%;
@@ -1061,5 +1224,3 @@ section.main_section{
              
             }
         }
-
-    }

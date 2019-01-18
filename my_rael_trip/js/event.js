@@ -184,27 +184,26 @@ var eventMethods = {
     },
     headerChangeEvent: function () {
         $(window).scroll(function () {
-            if (window.scrollY >= 1) {
+            if (window.scrollY >= 41) {
                 $(".page_header_top").hide();
                 $(".page_header").css({
-                    "height": "50px;"
                 })
                 $(".page_header_bottom").css({
                     "position": "fixed",
                     "top": "0px",
-                    "height": "50px",
+                    "height": "52px",
                     "z-index": "999"
 
                 })
             }
-            else if (window.screenY == 0) {
+            else if (window.screenY <= 40) {
                 $(".page_header_top").show();
                 $(".page_header_bottom").css({
                     "position": "inherit",
                 })
-
-
             }
+
+           
         })
     }
 
@@ -219,6 +218,8 @@ eventMethods.headerChangeEvent();
 
 
 $(window).resize(function () {
+
+
 
     var theWindowSize = $(this).width();
     if (theWindowSize > 777) {
@@ -236,26 +237,26 @@ $(window).resize(function () {
 
 
 
-// var matchScreen = window.matchMedia;
-// var maxWidth = 1024;
-// var meidumWidth = 787;
-// var LargeScreen = '(min-width: 1025px)';
-// var MediumScreen = '(max-width: 1024px) and (min-width:787px)';
-// var smallScreen = '(max-width:786px)';
-// var LagreQuery = matchScreen(LargeScreen).matches;
-// var MediumQuery = matchScreen(MediumQuery).matches;
-// var smallQuery = matchScreen(smallQuery).matches;
+var matchScreen = window.matchMedia;
+var maxWidth = 1024;
+var meidumWidth = 787;
+var LargeScreen = '(min-width: 1025px)';
+var MediumScreen = '(max-width: 1024px) and (min-width:787px)';
+var smallScreen = '(max-width:786px)';
+var LagreQuery = matchScreen(LargeScreen).matches;
+var MediumQuery = matchScreen(MediumQuery).matches;
+var smallQuery = matchScreen(smallQuery).matches;
 
-// //LagerSize MediaQuery
-// if (LagreQuery) {
+//LagerSize MediaQuery
+if (LagreQuery) {
 
-// }
+}
 
-// else if (MediumQuery) {
+else if (MediumQuery) {
 
 
-// }
-// else if (smallQuery) {
+}
+else if (smallQuery) {
 
-// }
+}
 
