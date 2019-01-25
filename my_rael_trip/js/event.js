@@ -1,3 +1,8 @@
+var XmlHttp = new XMLHttpRequest();
+var url = "data/data.json"
+XmlHttp.open("GET", url, true);
+XmlHttp.send();
+
 var eventMethods = {
     MainBgEvent: function () {
         $(window).on("load", function () {
@@ -203,8 +208,62 @@ var eventMethods = {
                 })
             }
 
-           
+
         })
+    },
+    pageList: function () {
+        $(document).ready(function(){
+            $(".hot_trip_cover").click(function(){
+                $(".hot_trip_cover").not().css({
+                    "opacity":"0.0"
+                })                
+                $(this).css({
+                    "opacity":"1.0"
+                })
+            })
+        })
+        //page2 trip list throw
+        XmlHttp.onreadystatechange = function () {
+            if (XmlHttp.readyState == XMLHttpRequest.DONE) {
+                console.log(XmlHttp.status);
+                if (XmlHttp.status == 200) {
+
+                    var JsonData = XmlHttp.responseText;
+                    var Data = JSON.parse(JsonData);
+
+                    var DataArr = [Data.trip1, Data.trip2, Data.trip3, Data.trip4,
+                    Data.trip5, Data.trip6, Data.trip7, Data.trip8, Data.trip9]
+
+
+                    $(document).ready(function () {
+                        $(".hot_trip").click(function () {
+                            var ulList = document.querySelector(".hot_trip_ul");
+                            ulList.innerHTML = " ";                       
+
+                            var tripId = $(this).attr('id');
+                            var ListNo = $(this).index();
+                            
+                            function ListThrowFn() {
+                                var ulList = document.querySelector(".hot_trip_ul");
+                                ulList.innerHTML += "<li><a href=''>" + DataArr[ListNo][i] + "</a></li>"
+                            }
+
+                           
+                            for (i = 0; i <= DataArr[ListNo].length - 1; i++) {
+                                if (tripId == "trip"+(ListNo+1)) {
+                                    ListThrowFn();
+                                }                             
+                            }
+
+                        })
+                    })
+
+
+                }
+            }
+        }
+
+
     }
 
 }
@@ -214,6 +273,8 @@ eventMethods.MainPageSlider();
 eventMethods.thummoreEvent();
 eventMethods.rotateBoxEvent();
 eventMethods.headerChangeEvent();
+eventMethods.pageList();
+
 
 
 
