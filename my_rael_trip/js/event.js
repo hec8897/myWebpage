@@ -1,7 +1,4 @@
-var XmlHttp = new XMLHttpRequest();
-var url = "data/data.json"
-XmlHttp.open("GET", url, true);
-XmlHttp.send();
+
 
 var eventMethods = {
     MainBgEvent: function () {
@@ -212,47 +209,56 @@ var eventMethods = {
         })
     },
     pageList: function () {
-        $(document).ready(function(){
-            $(".hot_trip_cover").click(function(){
+        $(document).ready(function () {
+            //tripcover event
+            $(".hot_trip_cover").click(function () {
                 $(".hot_trip_cover").not().css({
-                    "opacity":"0.0"
-                })                
+                    "opacity": "0.0"
+                })
                 $(this).css({
-                    "opacity":"1.0"
+                    "opacity": "1.0"
                 })
             })
         })
+
+        var XmlHttp = new XMLHttpRequest();
+        var url = "data/data.json"
+        XmlHttp.open("GET", url, true);
+        XmlHttp.send();
         //page2 trip list throw
         XmlHttp.onreadystatechange = function () {
             if (XmlHttp.readyState == XMLHttpRequest.DONE) {
-                console.log(XmlHttp.status);
+                console.log("Ajax_status:" + XmlHttp.status);
                 if (XmlHttp.status == 200) {
 
                     var JsonData = XmlHttp.responseText;
                     var Data = JSON.parse(JsonData);
+                    //Json data obj parsing
 
                     var DataArr = [Data.trip1, Data.trip2, Data.trip3, Data.trip4,
                     Data.trip5, Data.trip6, Data.trip7, Data.trip8, Data.trip9]
-
+                    //Json 객체 배열
 
                     $(document).ready(function () {
                         $(".hot_trip").click(function () {
                             var ulList = document.querySelector(".hot_trip_ul");
-                            ulList.innerHTML = " ";                       
+                            ulList.innerHTML = " ";
+                            //LIST 초기화 (중복적으로 생성되는것 방지)               
 
                             var tripId = $(this).attr('id');
                             var ListNo = $(this).index();
-                            
+                            //요소가 몇번째인지 
+
                             function ListThrowFn() {
-                                var ulList = document.querySelector(".hot_trip_ul");
                                 ulList.innerHTML += "<li><a href=''>" + DataArr[ListNo][i] + "</a></li>"
                             }
-
-                           
+                            //List를 뿌려줌                           
                             for (i = 0; i <= DataArr[ListNo].length - 1; i++) {
-                                if (tripId == "trip"+(ListNo+1)) {
+                                //몇번째 요소인지에 따라 요소 최대 갯수 설정 반복
+                                if (tripId == "trip" + (ListNo + 1)) {
+                                    //id값과 몇번째 요소인지 매칭하여 함수 실행
                                     ListThrowFn();
-                                }                             
+                                }
                             }
 
                         })

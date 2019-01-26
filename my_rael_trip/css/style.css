@@ -30,6 +30,7 @@ body {
 @media (max-width:777px) {
   html,
   body {
+    min-width: 320px;
     font-size: 12px;
   }
 }
@@ -823,6 +824,11 @@ div.page1_container div.main_content section.section3 {
     height: 800px;
   }
 }
+@media (max-width:777px) {
+  div.page1_container div.main_content section.section3 {
+    height: 750px;
+  }
+}
 div.page1_container div.main_content section.section3 h1 {
   text-align: left;
   font-size: 1.2rem;
@@ -908,11 +914,23 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   background-size: 100%;
   overflow: hidden;
   margin: 5px;
+  background-size: cover;
+}
+@media (max-width:777px) {
+  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box {
+    width: 45%;
+    height: 180px;
+  }
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box h3 {
   margin-top: 150px;
   height: 10%;
   font-size: 1.1rem;
+}
+@media (max-width:777px) {
+  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box h3 {
+    margin-top: 130px;
+  }
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box h3 a {
   color: white;
@@ -921,6 +939,11 @@ div.page1_container div.main_content section.section3 div.rotate_menu div.rotate
   color: #424242;
   font-size: 0.8rem;
   margin-top: 5px;
+}
+@media (max-width:777px) {
+  div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box p {
+    margin-top: 15px;
+  }
 }
 div.page1_container div.main_content section.section3 div.rotate_menu div.rotate_boxs div.rotate_box:nth-child(1) {
   background-image: url(../img/event_thum1.jpg);
