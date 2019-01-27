@@ -275,10 +275,10 @@ var eventMethods = {
         $(document).ready(function () {
             $(".page2_ui_con").click(function () {
                 $(".page2_ui_con").not().css({
-                    "background-color": "black"
+                    "background-color": "lightgray"
                 })
                 $(this).css({
-                    "background-color": "green"
+                    "background-color": "#424242"
                 })
             })
 
@@ -296,13 +296,13 @@ var eventMethods = {
                 $(".page2_ui").animate({
                     "marginLeft": "-50%"
                 })
-                console.log("??")
             })
         })
 
     }
 
 }
+
 eventMethods.MainBgEvent();
 eventMethods.FavorEvent();
 eventMethods.MainPageSlider();
@@ -317,8 +317,6 @@ eventMethods.page2Uicon();
 
 $(window).resize(function () {
 
-
-
     var theWindowSize = $(this).width();
     if (theWindowSize > 777) {
         $(".thum").show();
@@ -329,7 +327,6 @@ $(window).resize(function () {
         $(".thum:nth-child(2),.thum:nth-child(3)").hide();
         $(".more_thum").show();
         $(".hide_thum").hide();
-
     }
 })
 

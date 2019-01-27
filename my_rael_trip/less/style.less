@@ -1222,10 +1222,8 @@ section.main_section{
                                 padding-top: 55px;
                                 font-size: 0.9rem;
                                 font-weight: normal;
-                                a{
                                 color: white;
 
-                                }
                             }
                             
                         }
@@ -1269,14 +1267,16 @@ section.main_section{
                     div.page2_ui_box{
                         width: 24.5%;;
                         height: 100%;;
-                        background: blue;
+                        background: lightblue;
+                        border-radius: 5px;
                         display: inline-block;
                     }                
                 }
                 div.page2_ui_controll{
                     width: 100px;
                     height: 20px;;
-                    border: 1px solid lightblue;
+                    border: 1px solid white;
+                    background: white;
                     position: relative;;
                     left: 50%;
                     top: -23px;
@@ -1286,10 +1286,13 @@ section.main_section{
                         width: 10px;
                         height: 10px;
                         display: inline-block;
-                        background-color: black;
+                        background-color: lightgray;
                         border-radius: 100px;
                         margin: 5px;
                         cursor: pointer;
+                        &:nth-child(2){
+                            background: #424242;
+                        }
 
                     }
                 }

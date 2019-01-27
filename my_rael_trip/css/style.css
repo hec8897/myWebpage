@@ -1145,8 +1145,6 @@ div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_tr
   padding-top: 55px;
   font-size: 0.9rem;
   font-weight: normal;
-}
-div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_trip_cover h4 a {
   color: white;
 }
 div.page2_container section.page2_section1 div.hot_trip_list {
@@ -1186,13 +1184,15 @@ div.page2_container section.page2_section2 div.page2_ui {
 div.page2_container section.page2_section2 div.page2_ui div.page2_ui_box {
   width: 24.5%;
   height: 100%;
-  background: blue;
+  background: lightblue;
+  border-radius: 5px;
   display: inline-block;
 }
 div.page2_container section.page2_section2 div.page2_ui_controll {
   width: 100px;
   height: 20px;
-  border: 1px solid lightblue;
+  border: 1px solid white;
+  background: white;
   position: relative;
   left: 50%;
   top: -23px;
@@ -1203,10 +1203,13 @@ div.page2_container section.page2_section2 div.page2_ui_controll div.page2_ui_co
   width: 10px;
   height: 10px;
   display: inline-block;
-  background-color: black;
+  background-color: lightgray;
   border-radius: 100px;
   margin: 5px;
   cursor: pointer;
+}
+div.page2_container section.page2_section2 div.page2_ui_controll div.page2_ui_con:nth-child(2) {
+  background: #424242;
 }
 footer {
   width: 100%;
