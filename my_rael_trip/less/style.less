@@ -31,7 +31,7 @@ html,body{
         font-size: 16px;    
     }
     @media@smallMedia{
-        min-width: 320px;
+        min-width: 340px;
         font-size: 12px;
     }
 }
@@ -215,7 +215,6 @@ section.main_section{
         
                             }    
                             @media@MediumMedia{
-                                font-size: 1rem;
                             }
                             @media@smallMedia{
                             }
@@ -1094,7 +1093,7 @@ section.main_section{
                 }
                 @media@smallMedia{
                     width: 95%;
-                    height: 120px;
+                    height: 80px;
                 } 
                 ul{
                     width: 90%;
@@ -1109,7 +1108,7 @@ section.main_section{
     
                     } 
                     li{ 
-                        padding: 10px;
+                        padding: 5px;
                         width: 33.33%;
                         height: 100%;
                         box-sizing: border-box;
@@ -1122,7 +1121,34 @@ section.main_section{
                             background-size: contain;
                             background-repeat: no-repeat;
                             background-position: center;
-                            float: left;                        
+                            float: left;     
+                            @media@MediumMedia{   
+                                width: 20%;
+                            }
+                            @media@smallMedia{
+                                width: 100%;
+                                background-size: 40%;
+                            }
+                            .mobile_hide_popup{
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+                                background-color: fade(@blackcolor,50%);
+                                padding: 5px;
+                                h3{
+                                    color: white!important;
+                                    font-weight: normal;
+                                    font-size: 0.7rem;
+                                    text-align: center;
+                                    line-height: 1.0rem;
+                                }
+                                p{
+                                    font-size: 0.6rem;
+                                    text-align: center;
+                                    line-height: 1.0rem;
+                                    margin-top: 5px;
+                                }
+                            }                                                
                         }
                         .icon1{
                             background-image: url(../img/world_icon.png);
@@ -1139,17 +1165,12 @@ section.main_section{
                             @media@MediumMedia{   
                                 font-size: 0.9rem;
                                 float: right;
-                                margin-top: 20px;
-                                margin-right: 20px;
+                                margin-top: 25px;
+                                margin-right: 3%;
                             }
                             @media@smallMedia{
-                                font-size: 0.9rem;
-                                float: right;
-                                margin-top: 20px;
-                                margin-right: 20px;
-            
-                            } 
-                            
+                                display: none;
+                            }                             
                             span{
                                 color: #424242;
                                 font-weight: normal;
@@ -1183,9 +1204,20 @@ section.main_section{
                         background-size: cover;
                         overflow: hidden;
                         &:hover .hot_trip_cover{
-                            opacity: 1.0;
-
                         }
+                        @media@LargeMedia{ 
+                        width: 10%;
+                        margin-left: 0px;
+                        margin-right: 0px;
+
+                        }    
+                        @media@MediumMedia{   
+                            width: 10%;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        }
+                        @media@smallMedia{
+                        } 
                         &:nth-child(1){
                             background-image: url(../img/page2_miny_thum1.jpg);
                         }

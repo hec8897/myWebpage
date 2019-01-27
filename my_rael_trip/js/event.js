@@ -271,6 +271,22 @@ var eventMethods = {
 
 
     },
+    page2IconEvent: function () {
+        $(document).ready(function () {
+
+            $(".icon").click(function () {
+                var ThisId = $(this).attr('id');
+                for (i = 1; i <= 3; i++) {
+                    if (ThisId == "page2_icon" + i) {
+                        $(this).children(".mobile_hide_popup").toggle();
+                    }
+                }
+            })
+
+
+        })
+
+    },
     page2Uicon: function () {
         $(document).ready(function () {
             $(".page2_ui_con").click(function () {
@@ -315,6 +331,7 @@ eventMethods.page2Uicon();
 
 
 
+
 $(window).resize(function () {
 
     var theWindowSize = $(this).width();
@@ -332,26 +349,22 @@ $(window).resize(function () {
 
 
 
-var matchScreen = window.matchMedia;
-var maxWidth = 1024;
-var meidumWidth = 787;
-var LargeScreen = '(min-width: 1025px)';
-var MediumScreen = '(max-width: 1024px) and (min-width:787px)';
-var smallScreen = '(max-width:786px)';
-var LagreQuery = matchScreen(LargeScreen).matches;
-var MediumQuery = matchScreen(MediumQuery).matches;
-var smallQuery = matchScreen(smallQuery).matches;
 
-//LagerSize MediaQuery
-if (LagreQuery) {
+var pcMedia = window.matchMedia('(min-width: 1025px)');
+var talbetMedia = window.matchMedia('(max-width: 1024px) and (min-width:787px)');
+var mobileMedia = window.matchMedia('( max-width: 786px )');
 
-}
 
-else if (MediumQuery) {
+if (pcMedia.matches == true) {
 
 
 }
-else if (smallQuery) {
+else if (talbetMedia.matches == true) {
+
 
 }
+else if (mobileMedia.matches == true) {
 
+    eventMethods.page2IconEvent();
+
+}
