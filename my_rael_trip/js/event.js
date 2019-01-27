@@ -270,6 +270,36 @@ var eventMethods = {
         }
 
 
+    },
+    page2Uicon: function () {
+        $(document).ready(function () {
+            $(".page2_ui_con").click(function () {
+                $(".page2_ui_con").not().css({
+                    "background-color": "black"
+                })
+                $(this).css({
+                    "background-color": "green"
+                })
+            })
+
+            $("#page2_ui_con1").click(function () {
+                $(".page2_ui").animate({
+                    "marginLeft": "50%"
+                })
+            })
+            $("#page2_ui_con2").click(function () {
+                $(".page2_ui").animate({
+                    "marginLeft": "0%"
+                })
+            })
+            $("#page2_ui_con3").click(function () {
+                $(".page2_ui").animate({
+                    "marginLeft": "-50%"
+                })
+                console.log("??")
+            })
+        })
+
     }
 
 }
@@ -280,6 +310,7 @@ eventMethods.thummoreEvent();
 eventMethods.rotateBoxEvent();
 eventMethods.headerChangeEvent();
 eventMethods.pageList();
+eventMethods.page2Uicon();
 
 
 
