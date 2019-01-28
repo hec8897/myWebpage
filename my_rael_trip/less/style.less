@@ -746,18 +746,15 @@ section.main_section{
             section.section2{
                 max-width: 1200px;
                 min-width: 340px;;
-                height: 420px;
                 @media@LargeMedia{ 
 
                 }    
                 @media@MediumMedia{
-                    height: 800px;
                     justify-content: space-around;
 
                 }
                 @media@smallMedia{
                     width: 90%;
-                    height: 1200px;
 
                 }  
                 h1{ 
@@ -769,7 +766,6 @@ section.main_section{
                 }
                 div.miny_thums{
                     width: 100%;
-                    height: 350px;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-around;
@@ -787,33 +783,33 @@ section.main_section{
 
                     }
                     @media@smallMedia{
-                        width: 90%;
-                        height: 650px;                        
+                        width: 95%;
                     }                    
                     &>div{
                         width: 15%;
                         height: 300px;;
-                        border-radius: 10px;
+                        border-radius: 5px;
                         margin-bottom: 10px;
+                        background-size: cover;
+
                         background-repeat: no-repeat;
-                        box-shadow: 0px 0px 1px 1px #424242;
                         @media@LargeMedia{    
                         }    
                         @media@MediumMedia{
                             width: 28%;
-                            height: 350px;
+                            height: 200px;
                             margin: 10px;
                         }
                         @media@smallMedia{
-                            width: 45%;
-                            height: 380px;;
+                            width: 30%;
+                            height: 250px;;
                         }    
                         a{
                             color: white;
                             &>div{
                                 width: 100%;
                                 height: 100%;
-                                border-radius: 10px;
+                                border-radius: 5px;
                                 padding: 20px;
                                 background-color: rgba(0, 0, 0, 0.5);
                                 display: none;
@@ -847,7 +843,7 @@ section.main_section{
                         }
                         &:nth-child(3){
                             background-image: url(../img/miny_thum3.jpg);
-                            background-position:40% 50%;
+                            background-position: 40%;
 
                         }
                         &:nth-child(4){

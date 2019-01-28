@@ -697,18 +697,15 @@ div.page1_container div.main_content section.section1 div.thumnails div.hide_thu
 div.page1_container div.main_content section.section2 {
   max-width: 1200px;
   min-width: 340px;
-  height: 420px;
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 {
-    height: 800px;
     justify-content: space-around;
   }
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 {
     width: 90%;
-    height: 1200px;
   }
 }
 div.page1_container div.main_content section.section2 h1 {
@@ -720,7 +717,6 @@ div.page1_container div.main_content section.section2 h1 {
 }
 div.page1_container div.main_content section.section2 div.miny_thums {
   width: 100%;
-  height: 350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -737,29 +733,28 @@ div.page1_container div.main_content section.section2 div.miny_thums::-webkit-sc
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
-    width: 90%;
-    height: 650px;
+    width: 95%;
   }
 }
 div.page1_container div.main_content section.section2 div.miny_thums > div {
   width: 15%;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 10px;
+  background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0px 0px 1px 1px #424242;
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 div.miny_thums > div {
     width: 28%;
-    height: 350px;
+    height: 200px;
     margin: 10px;
   }
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 div.miny_thums > div {
-    width: 45%;
-    height: 380px;
+    width: 30%;
+    height: 250px;
   }
 }
 div.page1_container div.main_content section.section2 div.miny_thums > div a {
@@ -768,7 +763,7 @@ div.page1_container div.main_content section.section2 div.miny_thums > div a {
 div.page1_container div.main_content section.section2 div.miny_thums > div a > div {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
@@ -795,7 +790,7 @@ div.page1_container div.main_content section.section2 div.miny_thums > div:nth-c
 }
 div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(3) {
   background-image: url(../img/miny_thum3.jpg);
-  background-position: 40% 50%;
+  background-position: 40%;
 }
 div.page1_container div.main_content section.section2 div.miny_thums > div:nth-child(4) {
   background-image: url(../img/miny_thum4.jpg);
