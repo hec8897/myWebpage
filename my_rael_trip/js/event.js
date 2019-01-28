@@ -260,21 +260,16 @@ var eventMethods = {
                                     ListThrowFn();
                                 }
                             }
-
                         })
                     })
-
-
                 }
             }
         }
-
-
     },
     page2IconEvent: function () {
         $(document).ready(function () {
-
             $(".icon").click(function () {
+
                 var ThisId = $(this).attr('id');
                 for (i = 1; i <= 3; i++) {
                     if (ThisId == "page2_icon" + i) {
@@ -368,3 +363,10 @@ else if (mobileMedia.matches == true) {
     eventMethods.page2IconEvent();
 
 }
+
+
+$(document).ready(function(){
+    $("html").on("swipe",function(){
+        $(this).hide();
+    })
+})
