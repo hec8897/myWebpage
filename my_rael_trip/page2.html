@@ -8,42 +8,45 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/event.js"></script>
+
     <title>마이 리얼 트립</title>
 </head>
 
 <body>
     <div id="wrap">
-        <header class="page_header">
-            <div class="header_wrap">
-                <div class="header_top_content page_header_top">
-                    <a href="index.html">
-                        <h1 class="logo page1_logo"></h1>
-                    </a>
-                    <div class="top_input page1_top_input">
-                        <div class="input_zoom">
-                            <span><img src="img/zoom.png" alt=""></span>
+            <header class="page_header">
+                    <div class="header_wrap">
+                        <div class="header_top_content page_header_top">
+                            <a href="index.html">
+                                <h1 class="logo page1_logo"></h1>
+                            </a>
+                            <div class="top_input page1_top_input">
+                                <div class="input_zoom">
+                                    <span><img src="img/zoom.png" alt=""></span>
+                                </div>
+                                <input type="text" placeholder="여행사나 상품을 검색해 보세요">
+                            </div>
+                            <ul class="top_li">
+                                <li><a href="partPage.html">마이페이지</a></li>
+                                <li><a href="">로그인</a></li>
+                                <li><a href="">회원가입</a></li>
+                            </ul>
                         </div>
-                        <input type="text" placeholder="여행사나 상품을 검색해 보세요">
                     </div>
-                    <ul class="top_li">
-                        <li><a href="partPage.html">마이페이지</a></li>
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="header_bottom_content page_header_bottom">
-                <ul class="page_nav page2_nav">
-                    <li><a href="page1.html">홈</a></li>
-                    <li><a href="">투어&티켓</a></li>
-                    <li><a href="">항공권</a></li>
-                    <li><a href="">숙소</a></li>
-                    <li><a href="">엑티비티</a></li>
-                </ul>
-            </div>
-        </header>
+        
+                    <div class="header_bottom_content page_header_bottom">
+                        <ul class="page_nav page2_nav">
+                            <li><a href="page1.html">홈</a></li>
+                            <li><a href="">투어&티켓</a></li>
+                            <li><a href="">항공권</a></li>
+                            <li><a href="">숙소</a></li>
+                            <li><a href="">엑티비티</a></li>
+                        </ul>
+                    </div>
+                </header>
+        
         <div class="page2_container">
             <div class="page2_main_banner">
                 <div class="page2_banner_cover">
@@ -89,7 +92,10 @@
 
             <section class="page2_section1">
                 <h2>인기 여행지</h2>
+                <div class="page2_left_btn rotate_btn"></div>
+
                 <div class="hot_trips">
+
                     <div class="hot_trip" id="trip1">
                         <div class="hot_trip_cover">
                             <h4>오사카</h4>
@@ -137,6 +143,8 @@
                     </div>
 
                 </div>
+                <div class="page2_right_btn rotate_btn"></div>
+
                 <div class="hot_trip_list">
                     <ul class="hot_trip_ul">
                     </ul>
