@@ -364,9 +364,34 @@ else if (mobileMedia.matches == true) {
 
 }
 
-
 $(document).ready(function(){
-    $("html").on("swipe",function(){
-        $(this).hide();
+    var page2ClickNum = 1;
+
+    $(".page2_right_btn").click(function(){
+        if(page2ClickNum < 3){
+            page2ClickNum ++;
+            console.log(page2ClickNum);
+            $(".hot_trips").animate({
+                marginLeft:"-=100%"
+            })
+        }
+        else if(page2ClickNum == 3){
+            console.log(page2ClickNum);
+        }
     })
+    $(".page2_left_btn").click(function(){
+        if(page2ClickNum <= 3 & page2ClickNum > 1){
+            page2ClickNum --;
+            console.log(page2ClickNum);
+            $(".hot_trips").animate({
+                marginLeft:"+=100%"
+            })
+        }
+        else if(page2ClickNum == 0){
+            console.log(page2ClickNum);
+        }
+    })
+
+
 })
+
