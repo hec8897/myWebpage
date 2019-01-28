@@ -733,7 +733,7 @@ div.page1_container div.main_content section.section2 div.miny_thums::-webkit-sc
 }
 @media (max-width:777px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
-    width: 95%;
+    width: 100%;
   }
 }
 div.page1_container div.main_content section.section2 div.miny_thums > div {
