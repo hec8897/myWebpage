@@ -310,6 +310,36 @@ var eventMethods = {
             })
         })
 
+    },
+    page2RotateBox:function(){
+
+        $(document).ready(function(){
+            var page2ClickNum = 1;
+        
+            $(".page2_right_btn").click(function(){
+                if(page2ClickNum < 3){
+                    page2ClickNum ++;
+                    console.log(page2ClickNum);
+                    $(".hot_trips").animate({
+                        marginLeft:"-=100%"
+                    })
+                }
+               
+            })
+            $(".page2_left_btn").click(function(){
+                if(page2ClickNum <= 3 & page2ClickNum > 1){
+                    page2ClickNum --;
+                    $(".hot_trips").animate({
+                        marginLeft:"+=100%"
+                    })
+                }
+              
+            })
+        
+        
+        })
+        
+
     }
 
 }
@@ -322,6 +352,7 @@ eventMethods.rotateBoxEvent();
 eventMethods.headerChangeEvent();
 eventMethods.pageList();
 eventMethods.page2Uicon();
+eventMethods.page2RotateBox();
 
 
 
@@ -364,34 +395,4 @@ else if (mobileMedia.matches == true) {
 
 }
 
-$(document).ready(function(){
-    var page2ClickNum = 1;
-
-    $(".page2_right_btn").click(function(){
-        if(page2ClickNum < 3){
-            page2ClickNum ++;
-            console.log(page2ClickNum);
-            $(".hot_trips").animate({
-                marginLeft:"-=100%"
-            })
-        }
-        else if(page2ClickNum == 3){
-            console.log(page2ClickNum);
-        }
-    })
-    $(".page2_left_btn").click(function(){
-        if(page2ClickNum <= 3 & page2ClickNum > 1){
-            page2ClickNum --;
-            console.log(page2ClickNum);
-            $(".hot_trips").animate({
-                marginLeft:"+=100%"
-            })
-        }
-        else if(page2ClickNum == 0){
-            console.log(page2ClickNum);
-        }
-    })
-
-
-})
 

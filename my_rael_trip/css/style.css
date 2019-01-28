@@ -1106,7 +1106,7 @@ div.page2_container div.page2_icon_section ul li h4 span {
 }
 div.page2_container section.page2_section1 {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 div.page2_container section.page2_section1 div.rotate_btn {
   width: 30px;
@@ -1117,7 +1117,7 @@ div.page2_container section.page2_section1 div.rotate_btn {
   position: absolute;
   background-size: 50%;
   background-repeat: no-repeat;
-  top: 600px;
+  top: 570px;
   z-index: 900;
   display: none;
 }
@@ -1226,6 +1226,12 @@ div.page2_container section.page2_section1 div.hot_trip_list {
   border: 1px solid lightgray;
   box-shadow: 0px 0px 1px 1px lightgray;
 }
+@media (max-width:777px) {
+  div.page2_container section.page2_section1 div.hot_trip_list {
+    width: 95%;
+    margin: 0px auto;
+  }
+}
 div.page2_container section.page2_section1 div.hot_trip_list ul {
   padding-left: 40px;
   line-height: 40px;
@@ -1244,7 +1250,7 @@ div.page2_container section.page2_section1 div.hot_trip_list ul li a:hover {
 div.page2_container section.page2_section2 {
   max-width: 1200px;
   height: 120px;
-  margin: 50px auto;
+  margin: 20px auto;
   text-align: center;
   overflow: hidden;
 }
