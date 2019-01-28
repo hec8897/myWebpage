@@ -32,6 +32,7 @@ body {
   body {
     min-width: 340px;
     font-size: 12px;
+    overflow-x: hidden;
   }
 }
 ul.main_bg {
@@ -1107,6 +1108,11 @@ div.page2_container section.page2_section1 {
   max-width: 1200px;
   margin: 50px auto;
 }
+@media (max-width:777px) {
+  div.page2_container section.page2_section1 {
+    width: 3600px;
+  }
+}
 div.page2_container section.page2_section1 h2 {
   font-size: 1.1rem;
   padding-left: 10px;
@@ -1140,6 +1146,11 @@ div.page2_container section.page2_section1 div.hot_trips div.hot_trip {
     width: 10%;
     margin-left: 0px;
     margin-right: 0px;
+  }
+}
+@media (max-width:777px) {
+  div.page2_container section.page2_section1 div.hot_trips div.hot_trip {
+    width: 10%;
   }
 }
 div.page2_container section.page2_section1 div.hot_trips div.hot_trip:nth-child(1) {

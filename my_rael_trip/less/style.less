@@ -33,6 +33,7 @@ html,body{
     @media@smallMedia{
         min-width: 340px;
         font-size: 12px;
+        overflow-x: hidden;
     }
 }
 ul.main_bg{
@@ -1184,6 +1185,10 @@ section.main_section{
             section.page2_section1{
                 max-width: 1200px;
                 margin: 50px auto;
+                @media@smallMedia{
+                    width: 3600px;
+                } 
+                 
                 h2{
                     font-size: 1.1rem;
                     padding-left: 10px;
@@ -1193,6 +1198,8 @@ section.main_section{
                     height: 80px;;
                     margin: 10px auto;
                     text-align: center;
+                  
+                   
                     div.hot_trip{
                         width: 10%;
                         height: 100%;
@@ -1217,6 +1224,7 @@ section.main_section{
                         margin-right: 0px;
                         }
                         @media@smallMedia{
+                            width: 10%;
                         } 
                         &:nth-child(1){
                             background-image: url(../img/page2_miny_thum1.jpg);
