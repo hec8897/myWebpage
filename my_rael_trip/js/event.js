@@ -250,7 +250,7 @@ var eventMethods = {
                             //요소가 몇번째인지 
 
                             function ListThrowFn() {
-                                ulList.innerHTML += "<li><a href=''>" + DataArr[ListNo][i] + "</a></li>"
+                                ulList.innerHTML += "<li><a href='page2_sub"+tripId+".html'>" + DataArr[ListNo][i] + "</a></li>"
                             }
                             //List를 뿌려줌                           
                             for (i = 0; i <= DataArr[ListNo].length - 1; i++) {

@@ -32,7 +32,7 @@ body {
   body {
     min-width: 340px;
     font-size: 12px;
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 }
 ul.main_bg {
@@ -723,9 +723,6 @@ div.page1_container div.main_content section.section2 div.miny_thums {
   margin: 10px auto;
   -ms-overflow-style: none;
 }
-div.page1_container div.main_content section.section2 div.miny_thums::-webkit-scrollbar {
-  display: none;
-}
 @media (max-width:991px) and (min-width:778px) {
   div.page1_container div.main_content section.section2 div.miny_thums {
     justify-content: space-around;
@@ -1103,6 +1100,11 @@ div.page2_container section.page2_section1 {
   max-width: 1200px;
   margin: 20px auto;
 }
+@media (max-width:777px) {
+  div.page2_container section.page2_section1 {
+    overflow-x: scroll;
+  }
+}
 div.page2_container section.page2_section1 div.rotate_btn {
   width: 30px;
   height: 30px;
@@ -1215,31 +1217,33 @@ div.page2_container section.page2_section1 div.hot_trips div.hot_trip div.hot_tr
   font-weight: normal;
   color: white;
 }
-div.page2_container section.page2_section1 div.hot_trip_list {
+div.page2_container div.hot_trip_list {
+  width: 100%;
   max-width: 1200px;
+  margin: 0px auto;
   height: 40px;
   border: 1px solid lightgray;
   box-shadow: 0px 0px 1px 1px lightgray;
 }
 @media (max-width:777px) {
-  div.page2_container section.page2_section1 div.hot_trip_list {
+  div.page2_container div.hot_trip_list {
     width: 95%;
     margin: 0px auto;
   }
 }
-div.page2_container section.page2_section1 div.hot_trip_list ul {
+div.page2_container div.hot_trip_list ul {
   padding-left: 40px;
   line-height: 40px;
 }
-div.page2_container section.page2_section1 div.hot_trip_list ul li {
+div.page2_container div.hot_trip_list ul li {
   display: inline;
   margin-right: 20px;
 }
-div.page2_container section.page2_section1 div.hot_trip_list ul li a {
+div.page2_container div.hot_trip_list ul li a {
   color: #424242;
   font-size: 0.8rem;
 }
-div.page2_container section.page2_section1 div.hot_trip_list ul li a:hover {
+div.page2_container div.hot_trip_list ul li a:hover {
   color: #4571ff;
 }
 div.page2_container section.page2_section2 {
