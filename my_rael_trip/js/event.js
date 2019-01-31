@@ -250,7 +250,39 @@ var eventMethods = {
                             //요소가 몇번째인지 
 
                             function ListThrowFn() {
-                                ulList.innerHTML += "<li><a href='page2_sub"+tripId+".html'>" + DataArr[ListNo][i] + "</a></li>"
+                                test = DataArr[ListNo][i];
+
+                                if (DataArr[ListNo] == Data.trip1) {
+                                    test2 = "오사카"
+                                    $(".tt").text("dd")
+                                }
+                                else if (DataArr[ListNo] == Data.trip2) {
+                                    test2 = "홍콩"
+                                }
+                                else if (DataArr[ListNo] == Data.trip3) {
+                                    test2 = "타이페이"
+                                }
+                                else if (DataArr[ListNo] == Data.trip4) {
+                                    test2 = "파리"
+                                }
+
+                                else if (DataArr[ListNo] == Data.trip5) {
+                                    test2 = "여행지5"
+                                }
+                                else if (DataArr[ListNo] == Data.trip6) {
+                                    test2 = "여행지6"
+                                }
+                                else if (DataArr[ListNo] == Data.trip7) {
+                                    test2 = "여행지7"
+                                }
+                                else if (DataArr[ListNo] == Data.trip8) {
+                                    test2 = "여행지8"
+                                }
+                                else if (DataArr[ListNo] == Data.trip9) {
+                                    test2 = "여행지9"
+                                }
+
+                                ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
                             }
                             //List를 뿌려줌                           
                             for (i = 0; i <= DataArr[ListNo].length - 1; i++) {
@@ -260,11 +292,39 @@ var eventMethods = {
                                     ListThrowFn();
                                 }
                             }
+                            $(".test_class").click(function () {
+                                popupOpen();
+
+                            })
+                            function popupOpen() {
+
+                                var url = "/test.html";
+                                var winWidth = 700;
+                                var winHeight = 600;
+                                var popupOption = "width=" + winWidth + ",height=" + winHeight;
+                                var popupWindow = window.open(url, "", popupOption);
+
+                                popupWindow.document.write("<link rel='stylesheet' href='css/style.css'>")
+                                popupWindow.document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>")
+                                popupWindow.document.write("<script src='js/event.js'></script>")
+                                popupWindow.document.write("<h1 class='testcss'>" + test2 + "</h1>")
+                                popupWindow.document.write("<h1 class='testcss'>" + test2 + "</h1>")
+                                popupWindow.window.location.reload(true);
+                            }
+                            console.log(test2)
+                       
                         })
                     })
                 }
             }
         }
+    },
+    testFn:function(){
+        $(document).ready(function(){
+            $(".testcss").click(function(){
+                $(this).hide();
+            })
+        })
     },
     page2IconEvent: function () {
         $(document).ready(function () {
@@ -311,34 +371,34 @@ var eventMethods = {
         })
 
     },
-    page2RotateBox:function(){
+    page2RotateBox: function () {
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             var page2ClickNum = 1;
-        
-            $(".page2_right_btn").click(function(){
-                if(page2ClickNum < 3){
-                    page2ClickNum ++;
+
+            $(".page2_right_btn").click(function () {
+                if (page2ClickNum < 3) {
+                    page2ClickNum++;
                     console.log(page2ClickNum);
                     $(".hot_trips").animate({
-                        marginLeft:"-=100%"
+                        marginLeft: "-=100%"
                     })
                 }
-               
+
             })
-            $(".page2_left_btn").click(function(){
-                if(page2ClickNum <= 3 & page2ClickNum > 1){
-                    page2ClickNum --;
+            $(".page2_left_btn").click(function () {
+                if (page2ClickNum <= 3 & page2ClickNum > 1) {
+                    page2ClickNum--;
                     $(".hot_trips").animate({
-                        marginLeft:"+=100%"
+                        marginLeft: "+=100%"
                     })
                 }
-              
+
             })
-        
-        
+
+
         })
-        
+
 
     }
 
@@ -353,6 +413,8 @@ eventMethods.headerChangeEvent();
 eventMethods.pageList();
 eventMethods.page2Uicon();
 eventMethods.page2RotateBox();
+eventMethods.testFn();
+
 
 
 

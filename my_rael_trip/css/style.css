@@ -5,6 +5,9 @@
 /*this style sheet is made a less css preprocessor*/
 /*=============================================*/
 /*=============================================*/
+.testcss{
+  color: blue;
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +23,13 @@ html,
 body {
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif;
+  overflow-x: hidden;
+}
+@media (max-width:1200px) and (min-width:992px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 @media (max-width:991px) and (min-width:778px) {
   html,
@@ -32,7 +42,7 @@ body {
   body {
     min-width: 340px;
     font-size: 12px;
-    overflow-x: scroll;
+    overflow-x: hidden;
   }
 }
 ul.main_bg {
@@ -50,6 +60,11 @@ ul.main_bg li {
 }
 ul.main_bg li.bg1 {
   background-image: url(../img/main_bg1.jpg);
+}
+@media (max-width:777px) {
+  ul.main_bg li.bg1 {
+    display: none;
+  }
 }
 ul.main_bg li.bg2 {
   background-image: url(../img/main_bg2.jpg);
@@ -1099,11 +1114,6 @@ div.page2_container div.page2_icon_section ul li h4 span {
 div.page2_container section.page2_section1 {
   max-width: 1200px;
   margin: 20px auto;
-}
-@media (max-width:777px) {
-  div.page2_container section.page2_section1 {
-    overflow-x: scroll;
-  }
 }
 div.page2_container section.page2_section1 div.rotate_btn {
   width: 30px;

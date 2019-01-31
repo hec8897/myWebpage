@@ -25,7 +25,10 @@ input{
 html,body{
     font-size: 16px;
     font-family: 'Nanum Gothic', sans-serif;
+    overflow-x: hidden;
     @media@LargeMedia{
+    overflow-x: hidden;
+
     }    
     @media@MediumMedia{
         font-size: 16px;    
@@ -33,7 +36,7 @@ html,body{
     @media@smallMedia{
         min-width: 340px;
         font-size: 12px;
-        overflow-x: scroll;
+        overflow-x: hidden;
     }
 }
 ul.main_bg{
@@ -50,6 +53,9 @@ ul.main_bg{
     }
         li.bg1{
             background-image: url(../img/main_bg1.jpg);
+            @media@smallMedia{
+                display: none;
+            }
         }
         li.bg2{
             background-image: url(../img/main_bg2.jpg);
@@ -1180,7 +1186,6 @@ section.main_section{
                 max-width: 1200px;
                 margin: 20px auto;
                 @media@smallMedia{
-                    overflow-x: scroll;
                 } 
                 div.rotate_btn{
                     width: 30px;
@@ -1306,7 +1311,7 @@ section.main_section{
                 width: 100%;
                 max-width: 1200px;
                 margin: 0px auto;
-            
+                
                 height: 40px;
                 border: 1px solid lightgray;
                 box-shadow: 0px 0px 1px 1px lightgray;
