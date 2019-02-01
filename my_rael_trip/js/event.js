@@ -1,5 +1,3 @@
-
-
 var eventMethods = {
     MainBgEvent: function () {
         $(window).on("load", function () {
@@ -208,8 +206,11 @@ var eventMethods = {
 
         })
     },
-    pageList: function () {
-        $(document).ready(function () {
+   
+ 
+    pageList:function(){
+
+               $(document).ready(function () {
             //tripcover event
             $(".hot_trip_cover").click(function () {
                 $(".hot_trip_cover").not().css({
@@ -221,110 +222,6 @@ var eventMethods = {
             })
         })
 
-        var XmlHttp = new XMLHttpRequest();
-        var url = "data/data.json"
-        XmlHttp.open("GET", url, true);
-        XmlHttp.send();
-        //page2 trip list throw
-        XmlHttp.onreadystatechange = function () {
-            if (XmlHttp.readyState == XMLHttpRequest.DONE) {
-                console.log("Ajax_status:" + XmlHttp.status);
-                if (XmlHttp.status == 200) {
-
-                    var JsonData = XmlHttp.responseText;
-                    var Data = JSON.parse(JsonData);
-                    //Json data obj parsing
-
-                    var DataArr = [Data.trip1, Data.trip2, Data.trip3, Data.trip4,
-                    Data.trip5, Data.trip6, Data.trip7, Data.trip8, Data.trip9]
-                    //Json 객체 배열
-
-                    $(document).ready(function () {
-                        $(".hot_trip").click(function () {
-                            var ulList = document.querySelector(".hot_trip_ul");
-                            ulList.innerHTML = " ";
-                            //LIST 초기화 (중복적으로 생성되는것 방지)               
-
-                            var tripId = $(this).attr('id');
-                            var ListNo = $(this).index();
-                            //요소가 몇번째인지 
-
-                            function ListThrowFn() {
-                                test = DataArr[ListNo][i];
-
-                                if (DataArr[ListNo] == Data.trip1) {
-                                    test2 = "오사카"
-                                    $(".tt").text("dd")
-                                }
-                                else if (DataArr[ListNo] == Data.trip2) {
-                                    test2 = "홍콩"
-                                }
-                                else if (DataArr[ListNo] == Data.trip3) {
-                                    test2 = "타이페이"
-                                }
-                                else if (DataArr[ListNo] == Data.trip4) {
-                                    test2 = "파리"
-                                }
-
-                                else if (DataArr[ListNo] == Data.trip5) {
-                                    test2 = "여행지5"
-                                }
-                                else if (DataArr[ListNo] == Data.trip6) {
-                                    test2 = "여행지6"
-                                }
-                                else if (DataArr[ListNo] == Data.trip7) {
-                                    test2 = "여행지7"
-                                }
-                                else if (DataArr[ListNo] == Data.trip8) {
-                                    test2 = "여행지8"
-                                }
-                                else if (DataArr[ListNo] == Data.trip9) {
-                                    test2 = "여행지9"
-                                }
-
-                                ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
-                            }
-                            //List를 뿌려줌                           
-                            for (i = 0; i <= DataArr[ListNo].length - 1; i++) {
-                                //몇번째 요소인지에 따라 요소 최대 갯수 설정 반복
-                                if (tripId == "trip" + (ListNo + 1)) {
-                                    //id값과 몇번째 요소인지 매칭하여 함수 실행
-                                    ListThrowFn();
-                                }
-                            }
-                            $(".test_class").click(function () {
-                                popupOpen();
-
-                            })
-                            function popupOpen() {
-
-                                var url = "/test.html";
-                                var winWidth = 700;
-                                var winHeight = 600;
-                                var popupOption = "width=" + winWidth + ",height=" + winHeight;
-                                var popupWindow = window.open(url, "", popupOption);
-
-                                popupWindow.document.write("<link rel='stylesheet' href='css/style.css'>")
-                                popupWindow.document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>")
-                                popupWindow.document.write("<script src='js/event.js'></script>")
-                                popupWindow.document.write("<h1 class='testcss'>" + test2 + "</h1>")
-                                popupWindow.document.write("<h1 class='testcss'>" + test2 + "</h1>")
-                                popupWindow.window.location.reload(true);
-                            }
-                            console.log(test2)
-                       
-                        })
-                    })
-                }
-            }
-        }
-    },
-    testFn:function(){
-        $(document).ready(function(){
-            $(".testcss").click(function(){
-                $(this).hide();
-            })
-        })
     },
     page2IconEvent: function () {
         $(document).ready(function () {
@@ -393,15 +290,9 @@ var eventMethods = {
                         marginLeft: "+=100%"
                     })
                 }
-
             })
-
-
         })
-
-
     }
-
 }
 
 eventMethods.MainBgEvent();
