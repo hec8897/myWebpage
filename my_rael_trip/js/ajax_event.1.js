@@ -69,9 +69,9 @@ function ListHtmlEvent() {
                 ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
             }
             $(".test_class").click(function () {
-                Data = String(Data.Osaka);
+                Datas = String(Data.Osaka);
                 console.log(Data);        
-                windowPopUp(DataArr[0][0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],dataArr[5],123);
+                windowPopUp(dataArr[0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],DataArr[0]);
        
 
             })
@@ -112,7 +112,6 @@ function windowPopUp(a, b, c, d, e, f) {
         "<p>주소:" + c + "</p>",
         "<p>" + d + "</p>",
         "<p>입장시간:" + e + "</p>",
-
         " <div class='other_trip'>" + f + "</div>",
 
         "</div>",
