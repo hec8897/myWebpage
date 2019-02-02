@@ -33,7 +33,7 @@ function subDataFn() {
     $(document).ready(function () {
         var JsonData2 = XmlHttp.responseText;
         var Data2 = JSON.parse(JsonData2);
-        dataArr = Data2.Osaka1;
+        dataArr1 = Data2.Osaka1;
         dataArr2 = Data2.Osaka2;
 
         console.log(dataArr);
@@ -70,10 +70,15 @@ function ListHtmlEvent() {
             }
             $(".test_class").click(function () {
                 Datas = String(Data.Osaka);
-                console.log(Data);        
-                windowPopUp(dataArr[0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],DataArr[0]);
-       
-
+                console.log($(this).index());       
+                thisIndex = $(this).index();
+                if(thisIndex==0) {
+                    var dataArr = dataArr1
+                windowPopUp(dataArr[0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],DataArr[0]);      
+                }
+                else{
+                    windowPopUp(1,1,1,1,1,1)
+                }
             })
         })
     })
@@ -113,11 +118,7 @@ function windowPopUp(a, b, c, d, e, f) {
         "<p>" + d + "</p>",
         "<p>입장시간:" + e + "</p>",
         " <div class='other_trip'>" + f + "</div>",
-
         "</div>",
-
-
-
         "</div>",
         " </body>",
         "</html>"
