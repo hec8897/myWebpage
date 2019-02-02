@@ -1,6 +1,6 @@
 var XmlHttp = new XMLHttpRequest();
 
-function Ajax(a,b) {
+function Ajax(a, b) {
     //a:JsonUrl
     //b:사용할함수
     var urlData = a;
@@ -8,29 +8,40 @@ function Ajax(a,b) {
     XmlHttp.send();
     XmlHttp.onreadystatechange = function () {
         if (XmlHttp.readyState == XMLHttpRequest.DONE) {
-            if (XmlHttp.status == 200) {       
+            if (XmlHttp.status == 200) {
                 b();
             }
         }
     }
 }
 
-$(window).on("load",function(){
-    Ajax("data/data.json",ListHtmlEvent);
+$(window).on("load", function () {
+    Ajax("data/data.json", ListHtmlEvent);
 
 })
-Ajax("data/Oska.json",subDataFn);
+Ajax("data/Oska.json", subDataFn);
 
-var testVar;
-console.log(testVar);
 
-function subDataFn(){
-    $(document).ready(function(){
-            var JsonData2 = XmlHttp.responseText;
-            var Data2 = JSON.parse(JsonData2);
-            return testVar = {
-                test1:Data2.Osaka1[0]
-            }
+var dataArr = new Array();
+var dataArr2 = new Array();
+
+
+
+console.log(dataVar);
+
+function subDataFn() {
+    $(document).ready(function () {
+        var JsonData2 = XmlHttp.responseText;
+        var Data2 = JSON.parse(JsonData2);
+        dataArr = Data2.Osaka1;
+        dataArr2 = Data2.Osaka2;
+
+        console.log(dataArr);
+        console.log(dataArr2);
+
+
+        return dataArr, dataArr2;
+
     })
 }
 
@@ -49,6 +60,8 @@ function ListHtmlEvent() {
             var ListNo = $(this).index();
 
 
+
+
             var ulList = document.querySelector(".hot_trip_ul");
             ulList.innerHTML = " ";
 
@@ -56,26 +69,61 @@ function ListHtmlEvent() {
                 ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
             }
             $(".test_class").click(function () {
-                windowPopUp(DataArr[0][0], String(testVar.test1));
+                Data = String(Data.Osaka);
+                console.log(Data);        
+                windowPopUp(DataArr[0][0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],dataArr[5],123);
+       
+
             })
         })
     })
 }
 
-function windowPopUp(a, b) {
+function windowPopUp(a, b, c, d, e, f) {
 
     var url = "/test.html";
     var winWidth = 700;
-    var winHeight = 600;
+    var winHeight = 500;
     var popupOption = "width=" + winWidth + ",height=" + winHeight;
     var popupWindow = window.open(url, "", popupOption);
 
-    popupWindow.document.write("<link rel='stylesheet' href='css/style.css'>")
-    popupWindow.document.write("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>")
-    popupWindow.document.write("<script src='js/event.js'></script>")
-    popupWindow.document.write("<h1 class='testcss'>" + a + "</h1>")
-    popupWindow.document.write("<h1 class='testcss'>" + b + "</h1>")
-    popupWindow.document.write("<h1 class='testcss'>" + String(testVar.test1) + "</h1>")
+    popupWindow.document.write("<!DOCTYPE html>",
+        "<html lang='en'>",
+        "<head>",
+        "<meta charset='UTF-8'>",
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "<meta http-equiv='X-UA-Compatible' content='ie=edge'>",
+        "<link href='https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto' rel='stylesheet'>",
+        "<link rel='stylesheet' href='css/style.css'>",
+        "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>",
+        "<script src='js/event.js'></script>",
+        "<script src='js/ajax_event.1.js'></script>",
+        "<title>마이 리얼 트립</title>",
+        "</head>",
+        "<body>",
+        "<div id='popup_demo'>",
+        "<div class='picture_area'>",
+        "<div class='main_picture'></div>",
+        "<div class='sub_pictures'></div>",
+        " </div>",
+        "<div class='text_area'>",
+        "<h1>" + a + "</h1>",
+        "<p>" + b + "</p>",
+        "<p>주소:" + c + "</p>",
+        "<p>" + d + "</p>",
+        "<p>입장시간:" + e + "</p>",
+
+        " <div class='other_trip'>" + f + "</div>",
+
+        "</div>",
+
+
+
+        "</div>",
+        " </body>",
+        "</html>"
+    )
+
 
     popupWindow.window.location.reload(true);
 
