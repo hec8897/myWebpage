@@ -9,16 +9,30 @@ function Ajax(a,b) {
     XmlHttp.onreadystatechange = function () {
         if (XmlHttp.readyState == XMLHttpRequest.DONE) {
             if (XmlHttp.status == 200) {       
-                console.log(XmlHttp.responseText);
                 b();
             }
         }
     }
 }
 
-$(window).ready(function(){
+$(window).on("load",function(){
     Ajax("data/data.json",ListHtmlEvent);
+
 })
+Ajax("data/Oska.json",subDataFn);
+
+var testVar;
+console.log(testVar);
+
+function subDataFn(){
+    $(document).ready(function(){
+            var JsonData2 = XmlHttp.responseText;
+            var Data2 = JSON.parse(JsonData2);
+            return testVar = {
+                test1:Data2.Osaka1[0]
+            }
+    })
+}
 
 function ListHtmlEvent() {
     $(document).ready(function () {
@@ -42,7 +56,7 @@ function ListHtmlEvent() {
                 ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
             }
             $(".test_class").click(function () {
-                windowPopUp(DataArr[0][0], tripId);
+                windowPopUp(DataArr[0][0], String(testVar.test1));
             })
         })
     })
@@ -61,6 +75,8 @@ function windowPopUp(a, b) {
     popupWindow.document.write("<script src='js/event.js'></script>")
     popupWindow.document.write("<h1 class='testcss'>" + a + "</h1>")
     popupWindow.document.write("<h1 class='testcss'>" + b + "</h1>")
+    popupWindow.document.write("<h1 class='testcss'>" + String(testVar.test1) + "</h1>")
+
     popupWindow.window.location.reload(true);
 
 }
