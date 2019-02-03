@@ -91,19 +91,9 @@ function ListHtmlEvent() {
 
                         if (thisIndex == j) {                                
                             var dataArr = dataArr[j]
-                            windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0], "ajaxoskaimg0");
+                            windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0],dataArr[5]);
                         }
-
-
                     }
-
-               
-            
-                    // else {
-                    //     var dataArr = dataArr2
-                    //     windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0], "ajaxoskaimg0");
-
-                    // }
 
                 }
 
