@@ -19,20 +19,15 @@ $(window).on("load", function () {
     Ajax("data/data.json", ListHtmlEvent);
 
 })
-Ajax("data/Oska.json", subDataFn);
+Ajax("data/trip.json", subDataFn);
 
+// var OsakaData1 = new Array();
+// var OsakaData2 = new Array();
+// var OsakaData3 = new Array();
+// var OsakaData4 = new Array();
+// var OsakaData5 = new Array();
 
-var dataArr1 = new Array();
-var dataArr2 = new Array();
-var dataArr3 = new Array();
-var dataArr4 = new Array();
-var dataArr5 = new Array();
-
-
-
-
-
-
+var trip
 
 console.log(dataVar);
 
@@ -40,20 +35,18 @@ function subDataFn() {
     $(document).ready(function () {
         var JsonData2 = XmlHttp.responseText;
         var Data2 = JSON.parse(JsonData2);
-        dataArr1 = Data2.Osaka1;
-        dataArr2 = Data2.Osaka2;
-        dataArr3 = Data2.Osaka3;
-        dataArr4 = Data2.Osaka4;
-        dataArr5 = Data2.Osaka5;
 
-        console.log(dataArr1);
-        console.log(dataArr2);
-        console.log(dataArr3);
-        console.log(dataArr4);
-        console.log(dataArr5);
+        return tripData = {
+            OsakaData: [Data2.Osaka1, Data2.Osaka2, Data2.Osaka3, Data2.Osaka4, Data2.Osaka5],
+            HonkongData: [Data2.Honkong1, Data2.Honkong2, Data2.Honkong3, Data2.Honkong4, Data2.Honkong5],
+            TywanData: [Data2.Tywan1, Data2.Tywan2, Data2.Tywan3, Data2.Tywan4, Data2.Tywan5],
+            ParisData: [Data2.paris1, Data2.paris2, Data2.paris3, Data2.paris4, Data2.paris5]
+
+        }
 
 
-        return dataArr1, dataArr2, dataArr3, dataArr4, dataArr5;
+
+        // return OsakaData1, OsakaData2, OsakaData3, OsakaData4, OsakaData5;
 
     })
 }
@@ -72,9 +65,6 @@ function ListHtmlEvent() {
             var tripId = $(this).attr('id');
             var ListNo = $(this).index();
 
-
-
-
             var ulList = document.querySelector(".hot_trip_ul");
             ulList.innerHTML = " ";
 
@@ -82,20 +72,36 @@ function ListHtmlEvent() {
                 ulList.innerHTML += "<li class='ajax_class'>" + DataArr[ListNo][i] + "</li>"
             }
             $(".ajax_class").click(function () {
+
                 Datas = String(Data.Osaka);
                 thisIndex = $(this).index();
-                dataArr = [dataArr1,dataArr2,dataArr3,dataArr4,dataArr5];
 
-                if (tripId == "trip1") {
-                    for(j=0; j<=dataArr.length; j++){
+                function testFn(a) {
 
-                        if (thisIndex == j) {                                
-                            var dataArr = dataArr[j]
-                            windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0],dataArr[5]);
+                    var travleData = a
+                    console.log(travleData[0][0]);
+
+                    for (j = 0; j <= travleData.length; j++) {
+                        if (thisIndex == j) {
+                            var travleData = a[j]
+                            windowPopUp(travleData[0], travleData[1], travleData[2], travleData[3], travleData[4], DataArr[0]);
                         }
                     }
-
                 }
+
+                if (tripId == "trip1") {
+                    testFn(tripData.OsakaData);
+                }
+                else if (tripId == "trip2") {
+                    testFn(tripData.HonkongData);
+                }
+                else if (tripId == "trip3") {
+                    testFn(tripData.TywanData);
+                }
+                else if (tripId == "trip4") {
+                    testFn(tripData.ParisData);
+                }
+
 
             })
         })
