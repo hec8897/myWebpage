@@ -22,8 +22,15 @@ $(window).on("load", function () {
 Ajax("data/Oska.json", subDataFn);
 
 
-var dataArr = new Array();
+var dataArr1 = new Array();
 var dataArr2 = new Array();
+var dataArr3 = new Array();
+var dataArr4 = new Array();
+var dataArr5 = new Array();
+
+
+
+
 
 
 
@@ -35,12 +42,18 @@ function subDataFn() {
         var Data2 = JSON.parse(JsonData2);
         dataArr1 = Data2.Osaka1;
         dataArr2 = Data2.Osaka2;
+        dataArr3 = Data2.Osaka3;
+        dataArr4 = Data2.Osaka4;
+        dataArr5 = Data2.Osaka5;
 
-        console.log(dataArr);
+        console.log(dataArr1);
         console.log(dataArr2);
+        console.log(dataArr3);
+        console.log(dataArr4);
+        console.log(dataArr5);
 
 
-        return dataArr, dataArr2;
+        return dataArr1, dataArr2, dataArr3, dataArr4, dataArr5;
 
     })
 }
@@ -66,25 +79,40 @@ function ListHtmlEvent() {
             ulList.innerHTML = " ";
 
             for (i = 0; i <= DataArr[ListNo].length - 1; i++) {
-                ulList.innerHTML += "<li class='test_class'>" + DataArr[ListNo][i] + "</li>"
+                ulList.innerHTML += "<li class='ajax_class'>" + DataArr[ListNo][i] + "</li>"
             }
-            $(".test_class").click(function () {
+            $(".ajax_class").click(function () {
                 Datas = String(Data.Osaka);
-                console.log($(this).index());       
                 thisIndex = $(this).index();
-                if(thisIndex==0) {
-                    var dataArr = dataArr1
-                windowPopUp(dataArr[0],dataArr[1],dataArr[2],dataArr[3],dataArr[4],DataArr[0]);      
+                dataArr = [dataArr1,dataArr2,dataArr3,dataArr4,dataArr5];
+
+                if (tripId == "trip1") {
+                    for(j=0; j<=dataArr.length; j++){
+
+                        if (thisIndex == j) {                                
+                            var dataArr = dataArr[j]
+                            windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0], "ajaxoskaimg0");
+                        }
+
+
+                    }
+
+               
+            
+                    // else {
+                    //     var dataArr = dataArr2
+                    //     windowPopUp(dataArr[0], dataArr[1], dataArr[2], dataArr[3], dataArr[4], DataArr[0], "ajaxoskaimg0");
+
+                    // }
+
                 }
-                else{
-                    windowPopUp(1,1,1,1,1,1)
-                }
+
             })
         })
     })
 }
 
-function windowPopUp(a, b, c, d, e, f) {
+function windowPopUp(a, b, c, d, e, f, img0, imga, imgb, imgc) {
 
     var url = "/test.html";
     var winWidth = 700;
@@ -108,7 +136,7 @@ function windowPopUp(a, b, c, d, e, f) {
         "<body>",
         "<div id='popup_demo'>",
         "<div class='picture_area'>",
-        "<div class='main_picture'></div>",
+        "<div class='main_picture' style='background-image:url(img/" + img0 + ".jpg)'></div>",
         "<div class='sub_pictures'></div>",
         " </div>",
         "<div class='text_area'>",
