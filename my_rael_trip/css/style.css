@@ -1358,8 +1358,8 @@ footer div.footer_cover div.footer_list div.footer_logo p {
 #popup_demo div.picture_area div.main_picture {
   width: 90%;
   height: 60%;
-  background: lightblue;
   margin: 0px auto;
+  background-size: cover;
 }
 #popup_demo div.picture_area div.sub_pictures {
   width: 90%;
@@ -1390,4 +1390,7 @@ footer div.footer_cover div.footer_list div.footer_logo p {
   height: 140px;
   margin-top: 30px;
   background: gray;
+}
+.ajax_class {
+  cursor: pointer;
 }
