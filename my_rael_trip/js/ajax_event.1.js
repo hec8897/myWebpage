@@ -40,7 +40,8 @@ function subDataFn() {
             OsakaData: [Data2.Osaka1, Data2.Osaka2, Data2.Osaka3, Data2.Osaka4, Data2.Osaka5],
             HonkongData: [Data2.Honkong1, Data2.Honkong2, Data2.Honkong3, Data2.Honkong4, Data2.Honkong5],
             TywanData: [Data2.Tywan1, Data2.Tywan2, Data2.Tywan3, Data2.Tywan4, Data2.Tywan5],
-            ParisData: [Data2.paris1, Data2.paris2, Data2.paris3, Data2.paris4, Data2.paris5]
+            ParisData: [Data2.paris1, Data2.paris2, Data2.paris3, Data2.paris4, Data2.paris5],
+            dummyData: [Data2.dummy]
 
         }
 
@@ -76,11 +77,9 @@ function ListHtmlEvent() {
                 Datas = String(Data.Osaka);
                 thisIndex = $(this).index();
 
-                function testFn(a) {
-
+                function popupDataFn(a) {
                     var travleData = a
                     console.log(travleData[0][0]);
-
                     for (j = 0; j <= travleData.length; j++) {
                         if (thisIndex == j) {
                             var travleData = a[j]
@@ -90,16 +89,19 @@ function ListHtmlEvent() {
                 }
 
                 if (tripId == "trip1") {
-                    testFn(tripData.OsakaData);
+                    popupDataFn(tripData.OsakaData);
                 }
                 else if (tripId == "trip2") {
-                    testFn(tripData.HonkongData);
+                    popupDataFn(tripData.HonkongData);
                 }
                 else if (tripId == "trip3") {
-                    testFn(tripData.TywanData);
+                    popupDataFn(tripData.TywanData);
                 }
                 else if (tripId == "trip4") {
-                    testFn(tripData.ParisData);
+                    popupDataFn(tripData.ParisData);
+                }
+                else{
+                    popupDataFn(tripData.dummyData);
                 }
 
 
