@@ -1493,11 +1493,8 @@ div.page3_container div.page3_main_banner div.main_cover div.search_btn {
 @media (max-width:777px) {
   div.page3_container div.page3_main_banner div.main_cover div.search_btn {
     width: 40%;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     margin: 0px auto;
+    margin-top: 180px;
   }
 }
 footer {
