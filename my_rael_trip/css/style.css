@@ -13,7 +13,8 @@
 a {
   text-decoration: none;
 }
-input {
+input,
+button {
   outline: 0 none;
 }
 html,
@@ -417,6 +418,12 @@ header.page_header div.header_bottom_content .page1_nav li:nth-child(1) {
   border-bottom: 5px solid #81DAF5;
 }
 header.page_header div.header_bottom_content .page2_nav li:nth-child(2) {
+  border-bottom: 5px solid #81DAF5;
+}
+header.page_header div.header_bottom_content .page3_nav li:nth-child(3) {
+  border-bottom: 5px solid #81DAF5;
+}
+header.page_header div.header_bottom_content .page4_nav li:nth-child(4) {
   border-bottom: 5px solid #81DAF5;
 }
 /*===================intro page main container
@@ -1295,6 +1302,203 @@ div.page2_container section.page2_section2 div.page2_ui_controll div.page2_ui_co
 }
 div.page2_container section.page2_section2 div.page2_ui_controll div.page2_ui_con:nth-child(2) {
   background: #424242;
+}
+/*===============page3_container
+        ==========================*/
+div.page3_container div.page3_main_banner {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/page3_main.jpg);
+  background-size: cover;
+  background-position: 50% 60%;
+  padding: 40px;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner {
+    height: 100vh;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0px auto;
+}
+div.page3_container div.page3_main_banner div.main_cover ul.labels {
+  padding-left: 70px;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover ul.labels {
+    padding: 0px;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover ul.labels li {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 20px;
+  border-bottom: 2px solid lightgray;
+  color: lightgray;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover ul.labels li {
+    width: 50px;
+    margin-right: 10px;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover ul.labels li:nth-child(1) {
+  border-bottom-color: white;
+  color: white;
+}
+div.page3_container div.page3_main_banner div.main_cover ul.labels li:hover {
+  border-bottom-color: white;
+  color: white;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input {
+  width: 30%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 0px;
+  display: inline-block;
+  background-color: rgba(66, 66, 66, 0.5);
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover div.inputs .input {
+    display: block;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one {
+  width: 35%;
+  overflow: hidden;
+  line-height: 50px;
+  text-align: center;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one div {
+  width: 40%;
+  height: 100%;
+  background-color: rgba(66, 66, 66, 0);
+  display: inline-block;
+  overflow: hidden;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one div input {
+  height: 100%;
+  border: none;
+  background-color: rgba(66, 66, 66, 0);
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one div input::placeholder {
+  color: white;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one div.exchange_btn {
+  width: 10%;
+  height: 100%;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_one div.exchange_btn button {
+  width: 85%;
+  height: 100%;
+  background-image: url(../img/exchange.png);
+  background-size: 60%;
+  background-position: center;
+  background-color: rgba(66, 66, 66, 0);
+  background-repeat: no-repeat;
+  border: 0px;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_two {
+  width: 35%;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover div.inputs .input_two {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_two .input_two_icons {
+  width: 15%;
+  height: 100%;
+  background-image: url(../img/calendar.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+  float: left;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_two .input_two_text {
+  width: 50%;
+  height: 100%;
+  font-size: 0.9rem;
+  overflow: hidden;
+  line-height: 50px;
+  color: white;
+  text-align: left;
+  float: left;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_three {
+  width: 20%;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover div.inputs .input_three {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_three .input_three_icons {
+  width: 20%;
+  height: 100%;
+  background-image: url(../img/profile.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+  float: left;
+}
+div.page3_container div.page3_main_banner div.main_cover div.inputs .input_three .input_three_text {
+  width: 50%;
+  height: 100%;
+  font-size: 0.9rem;
+  overflow: hidden;
+  line-height: 50px;
+  color: white;
+  text-align: left;
+  float: left;
+}
+div.page3_container div.page3_main_banner div.main_cover div.search_btn {
+  width: 15%;
+  height: 40px;
+  background-color: #81DAF5;
+  margin-left: 55px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width:777px) {
+  div.page3_container div.page3_main_banner div.main_cover div.search_btn {
+    width: 40%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px auto;
+  }
 }
 footer {
   width: 100%;

@@ -304,7 +304,6 @@ eventMethods.headerChangeEvent();
 eventMethods.pageList();
 eventMethods.page2Uicon();
 eventMethods.page2RotateBox();
-eventMethods.testFn();
 
 
 

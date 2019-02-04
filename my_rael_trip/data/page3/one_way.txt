@@ -1,0 +1,33 @@
+                        <div class="inputs inputs_rounds">
+                            <div class="input_one input">
+                                <div class="" id="start_input">
+                                    <input type="text" placeholder="출발지">
+                                </div>
+                                <div class="exchange_btn">
+                                    <button></button>
+                                </div>
+                                <div id="goal_input">
+                                    <input type="text" placeholder="목적지">
+                                </div>
+                            </div>
+                            <div class="input_two input">
+                                <div class="input_two_icons">
+
+                                </div>
+                                <div class="input_two_text">
+                                    탑승 날짜선택
+                                </div>
+
+                            </div>
+                            <div class="input_three input">
+                                <div class="input_three_icons">
+
+                                </div>
+                                <div class="input_three_text">
+                                    인원선택
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_btn">
+                            항공권 검색
+                        </div>
