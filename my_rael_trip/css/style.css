@@ -1360,7 +1360,8 @@ div.page3_container div.page3_main_banner div.main_cover ul.labels li:hover {
 div.page3_container div.page3_main_banner div.main_cover div.inputs {
   width: 100%;
   height: 50px;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
 }
@@ -1477,25 +1478,50 @@ div.page3_container div.page3_main_banner div.main_cover div.inputs .input_three
   text-align: left;
   float: left;
 }
+div.page3_container div.page3_main_banner div.main_cover .inputs_multi {
+  margin-top: 10px!important;
+}
+div.page3_container div.page3_main_banner div.main_cover div.page3_btn {
+  margin-top: 20px;
+}
 div.page3_container div.page3_main_banner div.main_cover div.search_btn {
   width: 15%;
   height: 40px;
   background-color: #81DAF5;
   margin-left: 55px;
-  margin-top: 20px;
   border-radius: 5px;
   text-align: center;
   line-height: 40px;
   color: white;
   font-weight: bold;
+  float: left;
   cursor: pointer;
+}
+div.page3_container div.page3_main_banner div.main_cover div.search_btn:hover {
+  box-shadow: inset 0 0 2px #424242;
+  -webkit-box-shadow: inset 0 0 2px #424242;
+  -moz-box-shadow: inset 0 0 2px #424242;
 }
 @media (max-width:777px) {
   div.page3_container div.page3_main_banner div.main_cover div.search_btn {
     width: 40%;
     margin: 0px auto;
-    margin-top: 180px;
+    margin-top: 20%;
   }
+}
+div.page3_container div.page3_main_banner div.main_cover div.plus_btn {
+  width: 5%;
+  max-width: 50px;
+  height: 40px;
+  background: #81DAF5;
+  margin-left: 10px;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 footer {
   width: 100%;

@@ -1,1 +1,70 @@
-<h2>multiway</h2>
+  <div class="inputs inputs_multi">
+                            <div class="input_one input">
+                                <div class="" id="start_input">
+                                    <input type="text" placeholder="출발지">
+                                </div>
+                                <div class="exchange_btn">
+                                    <button></button>
+                                </div>
+                                <div id="goal_input">
+                                    <input type="text" placeholder="목적지">
+                                </div>
+                            </div>
+                            <div class="input_two input">
+                                <div class="input_two_icons">
+
+                                </div>
+                                <div class="input_two_text">
+                                    가는날 / 오는날
+                                </div>
+
+                            </div>
+                            
+                            <div class="input_three input">
+                                <div class="input_three_icons">
+
+                                </div>
+                             
+                            </div>
+                        </div>
+                        <div class="inputs inputs_multi">
+                            <div class="input_one input">
+                                <div class="" id="start_input">
+                                    <input type="text" placeholder="출발지">
+                                </div>
+                                <div class="exchange_btn">
+                                    <button></button>
+                                </div>
+                                <div id="goal_input">
+                                    <input type="text" placeholder="목적지">
+                                </div>
+                            </div>
+                            <div class="input_two input">
+                                <div class="input_two_icons">
+
+                                </div>
+                                <div class="input_two_text">
+                                    가는날 / 오는날
+                                </div>
+
+                            </div>
+                            
+                            <div class="input_three input">
+                                <div class="input_three_icons">
+
+                                </div>
+                             
+                            </div>
+                        </div>
+                        <div class="plus">
+                            
+                        </div>
+                        <div class="page3_btn">
+                
+                        <div class="search_btn">
+                            항공권 검색
+                        </div>
+                        <div class="plus_btn">
+                                &#43;
+                        </div>
+                        </div>

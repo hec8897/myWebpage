@@ -59,7 +59,6 @@ function ListHtmlEvent() {
             }
 
             $(".ajax_class").click(function () {
-
                 Datas = String(Data.Osaka);
                 thisIndex = $(this).index();
 
