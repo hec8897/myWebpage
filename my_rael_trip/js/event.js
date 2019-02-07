@@ -280,7 +280,6 @@ var eventMethods = {
                         marginLeft: "-=100%"
                     })
                 }
-
             })
             $(".page2_left_btn").click(function () {
                 if (page2ClickNum <= 3 & page2ClickNum > 1) {
@@ -290,6 +289,76 @@ var eventMethods = {
                     })
                 }
             })
+
+            var outBox = document.getElementById("hot_trips");
+
+            outBox.addEventListener("touchstart",eventHandle1,false)
+            outBox.addEventListener("touchend",eventHandle2)
+            // outBox.addEventListener("touchmove",eventHandle3)
+
+            var touchStart = 0;
+            var touchEnd = 0;
+            var page2ClickNum = 1;
+
+
+
+           function eventHandle1(ev){
+                ev.preventDefault();
+                var stratleng = ev.touches.length;
+                touchStart = event.touches[0].clientX
+                // console.log("터치시작"+touchStart);
+                return touchStart;               
+            }
+
+            function eventHandle2(ev){
+                ev.preventDefault()
+                var touchLength = ev.touches.length;
+                touchEnd = event.changedTouches[0].clientX
+                var gep = touchStart - touchEnd;
+                
+                if(page2ClickNum < 3){
+                    if(gep >=0){
+                        console.log(page2ClickNum);
+                        page2ClickNum++
+                        console.log("left");
+                        $(".hot_trips").animate({
+                            marginLeft: "-=100%"
+                        })
+                    }
+
+                }
+                if (page2ClickNum <= 3 & page2ClickNum > 1) {
+                    if(gep < 0){
+                        console.log(page2ClickNum);
+                        page2ClickNum--;
+                        console.log("right");
+                        $(".hot_trips").animate({
+                            marginLeft: "+=100%"
+                        })
+                    }
+                }
+              
+                
+                return touchEnd;      
+            }
+
+            // function eventHandle3(ev) {
+            //     ev.preventDefault()
+            //     var gep = (touchStart - touchEnd)
+
+            //     if(gep>=0){
+            //         console.log("left")
+            //         return gep = 0;
+            //     }
+            //     else{
+            //         console.log("right")
+            //         return gep = 0;
+
+            //     }
+
+              
+            // }
+
 
          
 
