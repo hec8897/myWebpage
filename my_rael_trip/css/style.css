@@ -1246,6 +1246,7 @@ div.page2_container div.hot_trip_list {
   }
 }
 div.page2_container div.hot_trip_list ul {
+  width: 120%;
   padding-left: 40px;
   line-height: 40px;
 }

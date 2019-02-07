@@ -276,7 +276,6 @@ var eventMethods = {
             $(".page2_right_btn").click(function () {
                 if (page2ClickNum < 3) {
                     page2ClickNum++;
-                    console.log(page2ClickNum);
                     $(".hot_trips").animate({
                         marginLeft: "-=100%"
                     })
@@ -291,7 +290,14 @@ var eventMethods = {
                     })
                 }
             })
+
+         
+
+               
+               
+            
         })
+      
     }
 }
 
