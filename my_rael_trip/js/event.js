@@ -292,7 +292,7 @@ var eventMethods = {
                 }
             })
 
-            var outBox = document.getElementById("test");
+            var outBox = document.getElementById("hot_trips");
 
             outBox.addEventListener("touchstart",eventHandle1,false)
             outBox.addEventListener("touchend",eventHandle2,false)
@@ -313,8 +313,7 @@ var eventMethods = {
                 touchEnd = event.changedTouches[0].clientX
                 var gep = touchStart - touchEnd;                
                 if(page2ClickNum < 3){
-                    if(gep >= 80){
-                        console.log(page2ClickNum);
+                    if(gep >= 150){
                         page2ClickNum++
                         console.log("left");
                         $(".hot_trips").animate({
@@ -324,8 +323,7 @@ var eventMethods = {
 
                 }
                 if (page2ClickNum <= 3 & page2ClickNum > 1) {
-                    if(gep < 80){
-                        console.log(page2ClickNum);
+                    if(gep < 150){
                         page2ClickNum--;
                         console.log("right");
                         $(".hot_trips").animate({
@@ -334,7 +332,7 @@ var eventMethods = {
                     }
                 }
                 
-                
+                ev.stopPropagation();
                 return touchEnd;      
             }
 
