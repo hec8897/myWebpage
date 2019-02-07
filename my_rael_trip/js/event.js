@@ -294,9 +294,8 @@ var eventMethods = {
 
             var outBox = document.getElementById("hot_trips");
 
-            outBox.addEventListener("touchstart",eventHandle1,false)
-            outBox.addEventListener("touchend",eventHandle2,false)
-            // outBox.addEventListener("touchmove",eventHandle3)
+            // outBox.addEventListener("touchstart",eventHandle1,false)
+            // outBox.addEventListener("touchend",eventHandle2,false)
 
             var touchStart = 0;
             var touchEnd = 0;
