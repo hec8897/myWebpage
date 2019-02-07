@@ -38,7 +38,8 @@ function subDataFn() {
 function ListHtmlEvent() {
     //Html 리스트 이벤트
     $(document).ready(function () {
-        $(".hot_trip").click(function () {
+        $(".hot_trip").click(function (event) {
+            
 
             var JsonData = XmlHttp.responseText;
             var Data = JSON.parse(JsonData);
@@ -57,6 +58,7 @@ function ListHtmlEvent() {
                 ulList.innerHTML += "<li class='ajax_class'>" + DataArr[ListNo][i] + "</li>"
                 //li태그내용 PUSH
             }
+            event.stopPropagation();
 
             $(".ajax_class").click(function () {
                 Datas = String(Data.Osaka);
@@ -91,7 +93,7 @@ function ListHtmlEvent() {
                 //tripId 별 데이터 설정
 
             })
-        })
+        },false)
     })
 }
 

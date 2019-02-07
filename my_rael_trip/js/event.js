@@ -270,7 +270,9 @@ var eventMethods = {
     },
     page2RotateBox: function () {
 
+        // event.stopPropagation();
         $(document).ready(function () {
+            
             var page2ClickNum = 1;
 
             $(".page2_right_btn").click(function () {
@@ -290,10 +292,10 @@ var eventMethods = {
                 }
             })
 
-            var outBox = document.getElementById("hot_trips");
+            var outBox = document.getElementById("test");
 
             outBox.addEventListener("touchstart",eventHandle1,false)
-            outBox.addEventListener("touchend",eventHandle2)
+            outBox.addEventListener("touchend",eventHandle2,false)
             // outBox.addEventListener("touchmove",eventHandle3)
 
             var touchStart = 0;
@@ -303,21 +305,15 @@ var eventMethods = {
 
 
            function eventHandle1(ev){
-                ev.preventDefault();
-                var stratleng = ev.touches.length;
                 touchStart = event.touches[0].clientX
-                // console.log("터치시작"+touchStart);
                 return touchStart;               
             }
 
             function eventHandle2(ev){
-                ev.preventDefault()
-                var touchLength = ev.touches.length;
                 touchEnd = event.changedTouches[0].clientX
-                var gep = touchStart - touchEnd;
-                
+                var gep = touchStart - touchEnd;                
                 if(page2ClickNum < 3){
-                    if(gep >=0){
+                    if(gep >= 80){
                         console.log(page2ClickNum);
                         page2ClickNum++
                         console.log("left");
@@ -328,7 +324,7 @@ var eventMethods = {
 
                 }
                 if (page2ClickNum <= 3 & page2ClickNum > 1) {
-                    if(gep < 0){
+                    if(gep < 80){
                         console.log(page2ClickNum);
                         page2ClickNum--;
                         console.log("right");
@@ -337,7 +333,7 @@ var eventMethods = {
                         })
                     }
                 }
-              
+                
                 
                 return touchEnd;      
             }
