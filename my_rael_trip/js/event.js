@@ -1,3 +1,5 @@
+
+
 var eventMethods = {
     MainBgEvent: function () {
         $(window).on("load", function () {
@@ -248,7 +250,7 @@ var eventMethods = {
                 $(this).css({
                     "background-color": "#424242"
                 })
-            })
+            })                       
 
             $("#page2_ui_con1").click(function () {
                 $(".page2_ui").animate({
@@ -266,15 +268,12 @@ var eventMethods = {
                 })
             })
         })
+     
 
     },
     page2RotateBox: function () {
-
-        // event.stopPropagation();
-        $(document).ready(function () {
-            
+        $(document).ready(function () {            
             var page2ClickNum = 1;
-
             $(".page2_right_btn").click(function () {
                 if (page2ClickNum < 3) {
                     page2ClickNum++;
@@ -290,77 +289,58 @@ var eventMethods = {
                         marginLeft: "+=100%"
                     })
                 }
-            })
+            })                      
+        })              
+    },
+    swipeEvent:function(){
+        var outBox = document.querySelector("#page2_ui");
+        outBox.addEventListener("touchstart",eventHandle1,false)
+        outBox.addEventListener("touchend",eventHandle2,false)
 
-            var outBox = document.getElementById("hot_trips");
+        var touchStart = 0;
+        var touchEnd = 0;
 
-            // outBox.addEventListener("touchstart",eventHandle1,false)
-            // outBox.addEventListener("touchend",eventHandle2,false)
+        function eventHandle1(ev){
+            ev.preventDefault();
+            touchStart = event.touches[0].clientX;
+            ev.stopPropagation();
 
-            var touchStart = 0;
-            var touchEnd = 0;
-            var page2ClickNum = 1;
+            return touchStart;
+        }
 
+        function eventHandle2(ev){
+            ev.preventDefault();
+            touchEnd = event.changedTouches[0].clientX
+            var gep = touchStart - touchEnd;
+            if(gep > 50){
+                $(".page2_ui").animate({
+                    "marginLeft": "-50%"
+                })
+                $(".page2_ui_con").css({
+                    "background-color": "lightgray"
+                })
 
-
-           function eventHandle1(ev){
-                touchStart = event.touches[0].clientX
-                return touchStart;               
+                $(".page2_ui_con:nth-child(3)").css({
+                    "background-color": "black"
+                })
             }
+            else if(gep < -50){
+                $(".page2_ui").animate({
+                    "marginLeft": "50%"                    
+                })
+                $(".page2_ui_con").css({
+                    "background-color": "lightgray"
+                })
 
-            function eventHandle2(ev){
-                touchEnd = event.changedTouches[0].clientX
-                var gep = touchStart - touchEnd;                
-                if(page2ClickNum < 3){
-                    if(gep >= 150){
-                        page2ClickNum++
-                        console.log("left");
-                        $(".hot_trips").animate({
-                            marginLeft: "-=100%"
-                        })
-                    }
-
-                }
-                if (page2ClickNum <= 3 & page2ClickNum > 1) {
-                    if(gep < 150){
-                        page2ClickNum--;
-                        console.log("right");
-                        $(".hot_trips").animate({
-                            marginLeft: "+=100%"
-                        })
-                    }
-                }
-                
-                ev.stopPropagation();
-                return touchEnd;      
+                $(".page2_ui_con:nth-child(1)").css({
+                    "background-color": "black"
+                })
             }
+        }
 
-            // function eventHandle3(ev) {
-            //     ev.preventDefault()
-            //     var gep = (touchStart - touchEnd)
-
-            //     if(gep>=0){
-            //         console.log("left")
-            //         return gep = 0;
-            //     }
-            //     else{
-            //         console.log("right")
-            //         return gep = 0;
-
-            //     }
-
-              
-            // }
-
-
-         
-
-               
-               
-            
-        })
-      
+        
     }
+    
 }
 
 eventMethods.MainBgEvent();
@@ -372,6 +352,8 @@ eventMethods.headerChangeEvent();
 eventMethods.pageList();
 eventMethods.page2Uicon();
 eventMethods.page2RotateBox();
+eventMethods.swipeEvent();
+
 
 
 
@@ -395,7 +377,6 @@ $(window).resize(function () {
 
 
 
-
 var pcMedia = window.matchMedia('(min-width: 1025px)');
 var talbetMedia = window.matchMedia('(max-width: 1024px) and (min-width:787px)');
 var mobileMedia = window.matchMedia('( max-width: 786px )');
@@ -414,5 +395,4 @@ else if (mobileMedia.matches == true) {
     eventMethods.page2IconEvent();
 
 }
-
 

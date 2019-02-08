@@ -8,7 +8,6 @@ function Ajax(a, b) {
     XmlHttp.send();
     XmlHttp.onreadystatechange = function () {
         if (XmlHttp.readyState == XMLHttpRequest.DONE) {
-            console.log(XmlHttp.status)
             if (XmlHttp.status == 200) {
                 b();
             }
@@ -166,3 +165,4 @@ $(window).on("load",function(){
         }
     })
 })
+
