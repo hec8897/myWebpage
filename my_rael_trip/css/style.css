@@ -1686,6 +1686,62 @@ div.page3_container section.page3_section1 div.section_wrap p.more_view a {
   color: #81DAF5;
   font-weight: bold;
 }
+div.page3_container section.page3_section2 div.section_wrap {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+div.page3_container section.page3_section2 div.section_wrap h2 {
+  text-align: center;
+}
+div.page3_container section.page3_section2 div.section_wrap h2 span {
+  font-size: 0.8rem;
+  color: gray;
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons {
+  width: 100%;
+  height: 350px;
+  margin: 20px auto;
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon {
+  height: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon1 {
+  background-image: url(../img/page3_world.png);
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon2 {
+  background-image: url(../img/page3_plane.png);
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon3 {
+  background-image: url(../img/page3_picture.png);
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon4 {
+  background-image: url(../img/page3_chat.png);
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10%;
+}
+div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon p {
+  width: 90%;
+  font-size: 1rem;
+  margin: 0px auto;
+  line-height: 1.6rem;
+}
+div.page3_container section.page3_section3 .section_wrap {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+div.page3_container section.page3_section3 h2 {
+  text-align: center;
+}
 footer {
   width: 100%;
   height: 400px;
