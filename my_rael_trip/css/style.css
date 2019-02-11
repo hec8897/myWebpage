@@ -1525,6 +1525,167 @@ div.page3_container div.page3_main_banner div.main_cover div.plus_btn {
   font-weight: bold;
   color: white;
 }
+div.page3_container section.page3_section1 div.section_wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+div.page3_container section.page3_section1 div.section_wrap h2 {
+  padding-left: 20px;
+  font-size: 1.3rem;
+}
+div.page3_container section.page3_section1 div.section_wrap h2 span {
+  font-size: 0.8rem;
+  color: gray;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs {
+    width: 98%;
+    height: 600px;
+    margin: 20px auto;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs {
+    width: 98%;
+    height: 600px;
+    margin: 20px auto;
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box {
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box {
+    height: 50%;
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(1) {
+  width: 30%;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(1) {
+    width: 100%;
+    border-bottom: 2px solid white;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(1) {
+    width: 100%;
+    height: 200px;
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(2) {
+  width: 40%;
+  box-sizing: border-box;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(2) {
+    width: 50%;
+    border-left: 0px solid white;
+    border-right: 1px solid white;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(2) {
+    width: 100%;
+    height: 200px;
+    border: none;
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(3) {
+  width: 30%;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(3) {
+    width: 50%;
+    border-left: 1px solid white;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box:nth-child(3) {
+    width: 100%;
+    height: 200px;
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.content {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: 0.8s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.content:hover {
+  transform: scale(1);
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.content:hover {
+    transform: scale(1.1);
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.content:hover {
+    transform: scale(1.1);
+  }
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box .content1 {
+  background-image: url(../img/page3_content2.jpg);
+  background-position: 50% 40%;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box .content2 {
+  background-image: url(../img/page3_content1.jpg);
+  background-position: 50% 40%;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box .content3 {
+  background-image: url(../img/page3_content3.jpg);
+  background-position: 50% 40%;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.texts {
+  position: relative;
+  top: -70px;
+  left: 20px;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.texts h1 {
+  font-size: 1.2rem;
+  border-bottom: 2px solid white;
+  color: white;
+  padding-bottom: 5px;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.texts h1 span {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.texts p {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 5px;
+}
+div.page3_container section.page3_section1 div.section_wrap div.content_boxs div.content_box div.texts p span {
+  background: #81DAF5;
+  font-weight: bold;
+  margin-left: 30px;
+}
+div.page3_container section.page3_section1 div.section_wrap p.more_view {
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 5px;
+}
+div.page3_container section.page3_section1 div.section_wrap p.more_view a {
+  color: #81DAF5;
+  font-weight: bold;
+}
 footer {
   width: 100%;
   height: 400px;

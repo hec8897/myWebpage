@@ -449,6 +449,8 @@ section.main_section{
             }
         }
     }
+
+ 
   
     /*===================intro page main container
     /*===================intro page main container
@@ -1390,6 +1392,8 @@ section.main_section{
 
         /*===============page3_container
         ==========================*/
+    
+
         div.page3_container{
             div.page3_main_banner{
                 width: 100%;
@@ -1621,6 +1625,155 @@ section.main_section{
                     }
               
 
+                }
+            }
+
+            section.page3_section1{
+                div.section_wrap{
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 30px auto;
+                    h2{
+                        padding-left: 20px;
+                        font-size: 1.3rem;
+                        span{
+                            font-size: 0.8rem;
+                            color: gray;
+                        }
+                    }
+                    div.content_boxs{
+                        width: 100%;
+                        height: 280px;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        margin-top: 20px;
+                            @media@MediumMedia{   
+                                width: 98%;
+                                height: 600px;;
+                                margin: 20px auto;
+                            }
+                            @media@smallMedia{
+                                width: 98%;
+                                height: 600px;;
+                                margin: 20px auto; 
+                            } 
+                        div.content_box{
+                            height: 100%;
+                            overflow: hidden;
+                            float: left;
+                            @media@MediumMedia{   
+                                height: 50%;;
+                            }
+                            @media@smallMedia{
+                            } 
+                            &:nth-child(1){
+                                width: 30%;
+                                @media@MediumMedia{   
+                                    width: 100%;
+                                    border-bottom: 2px solid white;
+                                }
+                                @media@smallMedia{
+                                    width: 100%;
+                                    height: 200px;  
+                                } 
+                            }
+                            &:nth-child(2){
+                                width: 40%;
+                                box-sizing: border-box;
+                                border-left: 2px solid white;
+                                border-right: 2px solid white;
+                                @media@MediumMedia{   
+                                    width: 50%;
+                                    border-left: 0px solid white;
+                                    border-right: 1px solid white;
+                                }
+                                @media@smallMedia{
+                                    width: 100%;
+                                    height: 200px;  
+                                    border: none;
+                                } 
+
+                            }
+                            &:nth-child(3){
+                                width: 30%;
+                                @media@MediumMedia{   
+                                    width: 50%;
+                                    border-left: 1px solid white;
+                                }
+                                @media@smallMedia{
+                                    width: 100%;
+                                    height: 200px;  
+                                } 
+                            }
+                            div.content{
+                                width: 100%;
+                                height: 100%;;
+                                transform: scale(1.1);
+                                transition: 0.8s;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                &:hover{
+                                transform: scale(1.0);
+                                @media@MediumMedia{   
+                                    transform: scale(1.1);
+                                }
+                                @media@smallMedia{
+                                    transform: scale(1.1);
+
+                                } 
+                                }                            
+                            }
+                            .content1{
+                                background-image: url(../img/page3_content2.jpg);
+                                background-position: 50% 40%;
+                            }
+                            .content2{
+                                background-image: url(../img/page3_content1.jpg);
+                                background-position: 50% 40%;
+                            }
+                            .content3{
+                                background-image: url(../img/page3_content3.jpg);
+                                background-position: 50% 40%;
+                            }
+                            div.texts{
+                                position: relative;
+                                top: -70px;
+                                left:20px;
+                                h1{                                
+                                    font-size: 1.2rem;
+                                    border-bottom: 2px solid white;
+                                    color: white;
+                                    padding-bottom: 5px;
+                                    span{
+                                        font-size: 1.1rem;
+                                        font-weight: normal;
+                                    }
+                                }
+                                p{
+                                    font-size: 0.9rem;
+                                    color: white;
+                                    margin-top: 5px;
+                                    span{
+                                        background:@pointColor;
+                                        font-weight: bold;
+                                        margin-left: 30px;
+                                    }
+                                }
+
+                            }
+                          
+                        }
+                    }
+                    p.more_view{
+                        text-align: right;
+                        padding-right: 20px;
+                        margin-top: 5px;
+                        a{
+                        color: @pointColor;
+                        font-weight: bold;
+                        }   
+                    }
+                    
                 }
             }
 
