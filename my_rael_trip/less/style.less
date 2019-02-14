@@ -1982,6 +1982,11 @@ section.main_section{
                     height: 100%;
                     margin: 0px auto;
                     padding: 70px;
+                    @media@MediumMedia{
+                        padding: 40px;
+                    }
+                    @media@smallMedia{
+                    }
                     div.inputs{
                         width: 45%;
                         height: 100%;;
@@ -1989,6 +1994,13 @@ section.main_section{
                         float: left;
                         background-color: rgba(255, 255, 255, 0.4);
                         border-radius: 5px;
+                        @media@MediumMedia{
+                            width: 45%;   
+                        }
+                        @media@smallMedia{
+                            width: 100%;
+                            margin: 0px auto;
+                        }
                         h2{
                             font-size: 1.2rem;
                         }
@@ -2054,6 +2066,9 @@ section.main_section{
                         width: 50%;
                         height: 100%;;
                         float: right;
+                        @media@smallMedia{
+                            display: none;
+                        }
                         h2{
                             color: white;
                             font-size: 1.3rem;
@@ -2063,11 +2078,111 @@ section.main_section{
                             width: 80%;
                             color: white;
                             margin-top: 20px;
+                            @media@MediumMedia{
+                                width: 95%;   
+                            }
+                            @media@smallMedia{
+                                display: none;
+                            }
                           
                         }
                     }
                 }
             
+            }
+            section.page4_section{
+                div.secion_wrap{
+                    max-width: 1200px;
+                    margin: 20px auto;
+                    height: 350px;
+
+                    @media@MediumMedia{
+                        width: 98%;
+                    }
+                    @media@smallMedia{
+                        width: 90%;
+                        height: 1200px;
+                            
+                    }
+                    h2{
+                        font-size: 1.2rem;
+                        line-height: 1.6rem;
+                        margin-bottom: 20px;
+                        span{
+                            font-size: 0.8rem;
+                            color: gray;
+
+                        }
+                    }
+                    div.home_reples{
+                        width: 100%;
+                        height: 350px;
+                        @media@MediumMedia{
+                        }
+                        @media@smallMedia{
+
+                        }
+                      
+
+                        & > div{
+                            width: 32%;
+                            display: inline-block;
+                            height: 100%;
+                            padding: 10px;
+                            margin-right: 0.5%;
+                            @media@MediumMedia{
+                                padding: 5px;
+                            }
+                            @media@smallMedia{
+                                width: 100%;
+                                display: block;
+                                padding: 0px;
+
+
+                            }
+                          
+
+                            div.home_pic{
+                                width: 100%;
+                                height: 60%;
+                                background-size: cover;
+                                border-radius: 5px;
+                                margin-bottom: 10px;
+                                @media@smallMedia{
+                                    height: 55%;
+                                    background-size: 100%;
+                                    background-position: bottom;
+    
+    
+                                }
+                            }
+                            div.home_pic1{
+                                background-image: url(../img/page4_thum1.jpg);
+                            }
+                            div.home_pic2{
+                                background-image: url(../img/page4_thum1.jpg);
+                            }
+                            div.home_pic3{
+                                background-image: url(../img/page4_thum1.jpg);
+                            }
+                            div.home_text{
+                                h2{
+                                    padding: 0px;
+                                }
+                                p{
+                                    margin: 10px auto;
+                                    font-size:0.9rem;
+                                    line-height: 1.5rem;
+                                    padding: 5px;
+                                    :nth-child(2){
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        
+                        }
+                    }
+                }
             }
 
         }
