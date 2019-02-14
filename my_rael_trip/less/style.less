@@ -25,6 +25,7 @@ input,button{
 html,body{
     font-size: 16px;
     font-family: 'Nanum Gothic', sans-serif;
+    overflow-x: hidden;
     @media@LargeMedia{
 
     }    
@@ -1324,7 +1325,7 @@ section.main_section{
                 } 
 
                 ul{
-                    width: 120%;
+                    width: 80%;
                     padding-left: 40px;
                     line-height: 40px;
 
@@ -2093,9 +2094,7 @@ section.main_section{
             section.page4_section{
                 div.secion_wrap{
                     max-width: 1200px;
-                    margin: 20px auto;
-                    height: 350px;
-
+                    margin: 100px auto;
                     @media@MediumMedia{
                         width: 98%;
                     }
@@ -2108,6 +2107,8 @@ section.main_section{
                         font-size: 1.2rem;
                         line-height: 1.6rem;
                         margin-bottom: 20px;
+                        padding-left: 20px;
+
                         span{
                             font-size: 0.8rem;
                             color: gray;
@@ -2173,13 +2174,67 @@ section.main_section{
                                     margin: 10px auto;
                                     font-size:0.9rem;
                                     line-height: 1.5rem;
-                                    padding: 5px;
-                                    :nth-child(2){
-                                        text-align: right;
-                                    }
+                                  
+                                }
+                                p.name{
+                                    font-weight: bold;
+                                    text-align: right;
                                 }
                             }
                         
+                        }
+                    }
+                }
+            }
+
+            section.page4_section2{
+                .section_wrap{
+                    max-width: 1200px;
+                    margin: 100px auto;
+                    h2{
+                        border-bottom: 1px solid lightgray;
+                        padding: 25px;
+                        padding-top: 0px;
+
+                    }
+                    div.page4_contents{
+                        width: 100%;
+                        border-bottom: 1px solid lightgray;
+                        text-align: center;
+                        div.page4_content{
+                            width: 33%;
+                            height: 200px;
+                            overflow: hidden;
+                            display: inline-block;
+                            .icon{
+                                height: 40%;
+                                width: 30%;
+                                background-repeat: no-repeat;
+                                background-position:left bottom;
+                                margin-left: 15px;
+                            }
+                            .icon1{
+                                background-size: 45%;
+                                background-image: url(../img/page4_icon1.png);
+                            }
+                            .icon2{
+                                background-size: 45%;
+                                background-image: url(../img/page4_icon2.png);
+                            }
+                            .icon3{
+                                background-size: 45%;
+                                background-image: url(../img/page4_icon3.png);
+                            }
+                            .text{
+                                width: 85%;
+                                height: 50%;
+                                
+                                text-align: left;
+                            }
+                            h4{
+                                margin: 15px auto;
+                            }
+
                         }
                     }
                 }

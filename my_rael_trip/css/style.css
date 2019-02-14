@@ -21,6 +21,7 @@ html,
 body {
   font-size: 16px;
   font-family: 'Nanum Gothic', sans-serif;
+  overflow-x: hidden;
 }
 @media (max-width:991px) and (min-width:778px) {
   html,
@@ -1239,7 +1240,7 @@ div.page2_container div.hot_trip_list {
   }
 }
 div.page2_container div.hot_trip_list ul {
-  width: 120%;
+  width: 80%;
   padding-left: 40px;
   line-height: 40px;
 }
@@ -1971,8 +1972,7 @@ div.page4_container div.page4_main_banner div.main_banner_cover div.texts p {
 }
 div.page4_container section.page4_section div.secion_wrap {
   max-width: 1200px;
-  margin: 20px auto;
-  height: 350px;
+  margin: 100px auto;
 }
 @media (max-width:991px) and (min-width:778px) {
   div.page4_container section.page4_section div.secion_wrap {
@@ -1989,6 +1989,7 @@ div.page4_container section.page4_section div.secion_wrap h2 {
   font-size: 1.2rem;
   line-height: 1.6rem;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 div.page4_container section.page4_section div.secion_wrap h2 span {
   font-size: 0.8rem;
@@ -2047,10 +2048,57 @@ div.page4_container section.page4_section div.secion_wrap div.home_reples > div 
   margin: 10px auto;
   font-size: 0.9rem;
   line-height: 1.5rem;
-  padding: 5px;
 }
-div.page4_container section.page4_section div.secion_wrap div.home_reples > div div.home_text p :nth-child(2) {
+div.page4_container section.page4_section div.secion_wrap div.home_reples > div div.home_text p.name {
+  font-weight: bold;
   text-align: right;
+}
+div.page4_container section.page4_section2 .section_wrap {
+  max-width: 1200px;
+  margin: 100px auto;
+}
+div.page4_container section.page4_section2 .section_wrap h2 {
+  border-bottom: 1px solid lightgray;
+  padding: 25px;
+  padding-top: 0px;
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content {
+  width: 33%;
+  height: 200px;
+  overflow: hidden;
+  display: inline-block;
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content .icon {
+  height: 40%;
+  width: 30%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: 15px;
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content .icon1 {
+  background-size: 45%;
+  background-image: url(../img/page4_icon1.png);
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content .icon2 {
+  background-size: 45%;
+  background-image: url(../img/page4_icon2.png);
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content .icon3 {
+  background-size: 45%;
+  background-image: url(../img/page4_icon3.png);
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content .text {
+  width: 85%;
+  height: 50%;
+  text-align: left;
+}
+div.page4_container section.page4_section2 .section_wrap div.page4_contents div.page4_content h4 {
+  margin: 15px auto;
 }
 footer {
   width: 100%;
