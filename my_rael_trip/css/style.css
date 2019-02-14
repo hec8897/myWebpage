@@ -1690,6 +1690,16 @@ div.page3_container section.page3_section2 div.section_wrap {
   max-width: 1200px;
   margin: 0px auto;
 }
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section2 div.section_wrap {
+    height: 800px;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section2 div.section_wrap {
+    height: 700px;
+  }
+}
 div.page3_container section.page3_section2 div.section_wrap h2 {
   text-align: center;
 }
@@ -1706,6 +1716,17 @@ div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_
   width: 25%;
   height: 100%;
   float: left;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon {
+    width: 50%;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon {
+    width: 50%;
+    height: 300px;
+  }
 }
 div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon .icon {
   height: 30%;
@@ -1727,20 +1748,112 @@ div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_
 }
 div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon h2 {
   font-size: 1.1rem;
+  margin-top: 20px;
   margin-bottom: 10%;
+  color: #0c7c9e;
 }
 div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon p {
   width: 90%;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0px auto;
   line-height: 1.6rem;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon p {
+    width: 80%;
+  }
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section2 div.section_wrap div.icons div.page3_icon p {
+    width: 85%;
+  }
 }
 div.page3_container section.page3_section3 .section_wrap {
   max-width: 1200px;
   margin: 0px auto;
+  height: 250px;
+}
+@media (max-width:991px) and (min-width:778px) {
+  div.page3_container section.page3_section3 .section_wrap {
+    width: 95%;
+  }
 }
 div.page3_container section.page3_section3 h2 {
   text-align: center;
+}
+div.page3_container section.page3_section3 div.info {
+  width: 70%;
+  float: left;
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section3 div.info {
+    width: 95%;
+    margin: 0px auto;
+    float: none;
+  }
+}
+div.page3_container section.page3_section3 div.info h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 20px;
+}
+div.page3_container section.page3_section3 div.info ul li {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid lightgray;
+}
+div.page3_container section.page3_section3 div.info ul li p {
+  float: left;
+  padding-left: 20px;
+  cursor: pointer;
+}
+div.page3_container section.page3_section3 div.info ul li p:nth-child(1) {
+  width: 70%;
+}
+div.page3_container section.page3_section3 div.info ul li p:nth-child(1):hover {
+  text-decoration: underline;
+}
+div.page3_container section.page3_section3 div.info ul li p:nth-child(2) {
+  width: 30%;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 0.8rem;
+  color: gray;
+}
+div.page3_container section.page3_section3 div.info_second {
+  width: 28%;
+  font-size: 1rem;
+  float: right;
+}
+@media (max-width:777px) {
+  div.page3_container section.page3_section3 div.info_second {
+    display: none;
+  }
+}
+div.page3_container section.page3_section3 div.info_second h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  padding-left: 0px;
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 20px;
+}
+div.page3_container section.page3_section3 div.info_second div.texts {
+  padding: 15px;
+}
+div.page3_container section.page3_section3 div.info_second div.texts h4 {
+  font-size: 1rem;
+}
+div.page3_container section.page3_section3 div.info_second div.texts h3 {
+  font-size: 1.5rem;
+  margin: 10px 0px 10px 0px ;
+}
+div.page3_container section.page3_section3 div.info_second div.texts p {
+  font-size: 0.7rem;
+  color: gray;
+  line-height: 1.3rem;
 }
 footer {
   width: 100%;
