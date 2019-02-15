@@ -2100,7 +2100,7 @@ section.main_section{
                     }
                     @media@smallMedia{
                         width: 90%;
-                        height: 1200px;
+                        height: 1050px;
                             
                     }
                     h2{
@@ -2152,8 +2152,7 @@ section.main_section{
                                 @media@smallMedia{
                                     height: 55%;
                                     background-size: 100%;
-                                    background-position: bottom;
-    
+                                    background-position: bottom;    
     
                                 }
                             }
@@ -2172,8 +2171,19 @@ section.main_section{
                                 }
                                 p{
                                     margin: 10px auto;
-                                    font-size:0.9rem;
-                                    line-height: 1.5rem;
+                                    font-size:0.7rem;
+                                    line-height: 1.3rem;
+                                    @media@LargeMedia{
+                                        font-size: 0.8rem;
+
+                                    }
+                                    @media@MediumMedia{
+                                    font-size:0.7rem;
+
+                                    }
+                                    @media@smallMedia{
+                                        font-size: 1.0rem;            
+                                    }
                                   
                                 }
                                 p.name{
@@ -2191,7 +2201,17 @@ section.main_section{
                 .section_wrap{
                     max-width: 1200px;
                     margin: 100px auto;
+                    @media@MediumMedia{
+                        width: 95%;                        
+                    }
+                    @media@smallMedia{
+                        width: 95%;                        
+
+                    }
                     h2{
+                        font-size: 1.2rem;
+                        line-height: 1.6rem;
+                        padding-left: 20px;
                         border-bottom: 1px solid lightgray;
                         padding: 25px;
                         padding-top: 0px;
@@ -2201,17 +2221,37 @@ section.main_section{
                         width: 100%;
                         border-bottom: 1px solid lightgray;
                         text-align: center;
+                     
                         div.page4_content{
                             width: 33%;
                             height: 200px;
                             overflow: hidden;
                             display: inline-block;
+                            @media@MediumMedia{
+                                width: 30%;
+                                height: 250px;
+                                    
+                            }
+                            @media@smallMedia{
+                                width: 30%;
+                                margin-right: 1%;
+
+
+                            }
                             .icon{
-                                height: 40%;
+                                height: 35%;
                                 width: 30%;
                                 background-repeat: no-repeat;
                                 background-position:left bottom;
                                 margin-left: 15px;
+                                @media@MediumMedia{
+                                    width: 45%;
+                                    height: 30%;;                                        
+                                }
+                                @media@smallMedia{
+                                    height: 25%;;                                        
+
+                                }
                             }
                             .icon1{
                                 background-size: 45%;
@@ -2230,12 +2270,99 @@ section.main_section{
                                 height: 50%;
                                 
                                 text-align: left;
+                                @media@MediumMedia{
+                                width: 90%;
+                                }
+                                @media@smallMedia{
+                                width: 95%;
+
+                                }
                             }
                             h4{
-                                margin: 15px auto;
+                                margin: 10px auto;
+                            }
+                            p{
+                                font-size: 0.85rem;
+                                line-height: 1.5rem;
                             }
 
                         }
+                    }
+                }
+            }
+
+            section.page4_section3{
+                div.section_wrap{
+                    max-width: 1200px;
+                    margin: 0px auto;
+                    h2{
+                        font-size: 1.2rem;
+                        line-height: 1.6rem;
+                        padding-left: 20px;
+                        padding: 25px;
+                        padding-top: 0px;
+                    }
+                    div.section3_contents{
+                        height: 350px;
+                        & > div{
+                            height: 100%;
+                            width: 25%;
+                            float: left;
+                            padding: 15px;
+                            @media@MediumMedia{
+                            }
+                            @media@smallMedia{
+                                width: 50%;
+                            }
+
+                            div.section3_pic{
+                                width: 100%;
+                                height: 50%;
+                                background-size: cover;
+                                border-radius: 5px;
+                            }
+                            div.section3_pic1{
+                                background-image: url(../img/page4_content1.jpg);
+                            }
+                            div.section3_pic2{
+                                background-image: url(../img/page4_content2.jpg);
+                            }
+                            div.section3_pic3{
+                                background-image: url(../img/page4_content3.jpg);
+                            }
+                            div.section3_pic4{
+                                background-image: url(../img/page4_content4.jpg);
+                            }
+                            div.section3_text{
+                                margin-top: 20px;
+                                p{
+                                    font-size: 0.75rem;
+                                    color: gray;
+                                }
+                                h4{
+                                    margin: 15px auto;
+                                    height: 40px;
+                                }
+
+                            }
+
+
+
+                        }
+                    }
+                    
+                }
+            }
+            section.page4_section4{
+                div.section_wrap{
+                    max-width: 1200px;
+                    margin: 0px auto;
+                    h2{
+                        font-size: 1.2rem;
+                        line-height: 1.6rem;
+                        padding-left: 20px;
+                        padding: 25px;
+                        padding-top: 0px;
                     }
                 }
             }
